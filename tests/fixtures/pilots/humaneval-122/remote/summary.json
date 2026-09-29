@@ -1,0 +1,57 @@
+{
+  "evidence": "tool-validation",
+  "tasks": [
+    {
+      "task_id": "HumanEval/0",
+      "base_status": "pass",
+      "plus_status": "pass",
+      "generation": {
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 195,
+          "total_tokens": 946,
+          "completion_tokens": 751
+        },
+        "output_target": 4096
+      },
+      "outcome": "correct"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "base_status": "fail",
+      "plus_status": "fail",
+      "generation": {
+        "finish_reason": "length",
+        "usage": {
+          "prompt_tokens": 187,
+          "total_tokens": 4283,
+          "completion_tokens": 4096
+        },
+        "output_target": 4096
+      },
+      "outcome": "incorrect"
+    },
+    {
+      "task_id": "HumanEval/2",
+      "base_status": "pass",
+      "plus_status": "pass",
+      "generation": {
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 156,
+          "total_tokens": 822,
+          "completion_tokens": 666
+        },
+        "output_target": 4096
+      },
+      "outcome": "correct"
+    }
+  ],
+  "selected": 3,
+  "graded": 3,
+  "correct": 2,
+  "complete": true,
+  "full_suite_accuracy": null,
+  "diagnostic": null,
+  "limitations": "Small selected sample; no full-suite accuracy or runtime claim."
+}

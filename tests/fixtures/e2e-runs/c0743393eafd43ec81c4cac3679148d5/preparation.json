@@ -1,0 +1,658 @@
+{
+  "tokenizer": "/path/to/repo/tokenizer",
+  "chat_template_kwargs": {
+    "enable_thinking": true,
+    "reasoning_effort": "xhigh"
+  },
+  "observations": [
+    {
+      "condition": "fresh-context-4096-256",
+      "phase": "warmup",
+      "repetition": 0,
+      "nonce": "0ad84da4b36775da8fcb1f3ca09ce3b9",
+      "local_input_tokens": 4096,
+      "bare_content_tokens": 4043,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-4096-256",
+      "phase": "measured",
+      "repetition": 0,
+      "nonce": "f3fa04f8888762bbf73328a191f80b2e",
+      "local_input_tokens": 4096,
+      "bare_content_tokens": 4043,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-4096-256",
+      "phase": "measured",
+      "repetition": 1,
+      "nonce": "54a472fc680929ee2a895c34b7222333",
+      "local_input_tokens": 4096,
+      "bare_content_tokens": 4043,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-4096-256",
+      "phase": "measured",
+      "repetition": 2,
+      "nonce": "c00c5b888529e383b74799a95696aa80",
+      "local_input_tokens": 4096,
+      "bare_content_tokens": 4043,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-4096-256",
+      "phase": "measured",
+      "repetition": 3,
+      "nonce": "f108a65963687b45b3ea22c40ccf7431",
+      "local_input_tokens": 4096,
+      "bare_content_tokens": 4043,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-4096-256",
+      "phase": "measured",
+      "repetition": 4,
+      "nonce": "7cad466ee15543fcd3d383e73f3c0491",
+      "local_input_tokens": 4096,
+      "bare_content_tokens": 4043,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-4096-1024",
+      "phase": "warmup",
+      "repetition": 0,
+      "nonce": "a812bf9d66ae0b951349ddb41c27f302",
+      "local_input_tokens": 4096,
+      "bare_content_tokens": 4043,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-4096-1024",
+      "phase": "measured",
+      "repetition": 0,
+      "nonce": "82a91f05e893c4add5186b1b20369cf6",
+      "local_input_tokens": 4096,
+      "bare_content_tokens": 4043,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-4096-1024",
+      "phase": "measured",
+      "repetition": 1,
+      "nonce": "789fdef4ff878485e867df3d8d1680bf",
+      "local_input_tokens": 4096,
+      "bare_content_tokens": 4043,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-4096-1024",
+      "phase": "measured",
+      "repetition": 2,
+      "nonce": "88eb828daeba05cd6fc15f49533bc9fa",
+      "local_input_tokens": 4096,
+      "bare_content_tokens": 4043,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-4096-1024",
+      "phase": "measured",
+      "repetition": 3,
+      "nonce": "49c5b70a8218182ef8dbdeda9bf9719b",
+      "local_input_tokens": 4096,
+      "bare_content_tokens": 4043,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-4096-1024",
+      "phase": "measured",
+      "repetition": 4,
+      "nonce": "5c02c7380bbc2b48b1c13ebffd926118",
+      "local_input_tokens": 4096,
+      "bare_content_tokens": 4043,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-16384-256",
+      "phase": "warmup",
+      "repetition": 0,
+      "nonce": "a200d17c163a8374362d05b4611f0c13",
+      "local_input_tokens": 16384,
+      "bare_content_tokens": 16331,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-16384-256",
+      "phase": "measured",
+      "repetition": 0,
+      "nonce": "0effebd85bfe87529fbd632881def2aa",
+      "local_input_tokens": 16384,
+      "bare_content_tokens": 16331,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-16384-256",
+      "phase": "measured",
+      "repetition": 1,
+      "nonce": "8a1ff5cc91f97ec694589b4d118b4846",
+      "local_input_tokens": 16384,
+      "bare_content_tokens": 16331,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-16384-256",
+      "phase": "measured",
+      "repetition": 2,
+      "nonce": "439d55337f3429c0cef1574171476324",
+      "local_input_tokens": 16384,
+      "bare_content_tokens": 16331,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-16384-256",
+      "phase": "measured",
+      "repetition": 3,
+      "nonce": "95479aebd838718298d7cc0e49770bb5",
+      "local_input_tokens": 16384,
+      "bare_content_tokens": 16331,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-16384-256",
+      "phase": "measured",
+      "repetition": 4,
+      "nonce": "bfad3ded0559ed627e398a875245e5af",
+      "local_input_tokens": 16384,
+      "bare_content_tokens": 16331,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-16384-1024",
+      "phase": "warmup",
+      "repetition": 0,
+      "nonce": "e023418255a14527ae0a6ee09b54ead6",
+      "local_input_tokens": 16384,
+      "bare_content_tokens": 16331,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-16384-1024",
+      "phase": "measured",
+      "repetition": 0,
+      "nonce": "f212060c073bdcc687293fbd2fce2612",
+      "local_input_tokens": 16384,
+      "bare_content_tokens": 16331,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-16384-1024",
+      "phase": "measured",
+      "repetition": 1,
+      "nonce": "7fcb5cd509e097f4dd6f9e35ea99f074",
+      "local_input_tokens": 16384,
+      "bare_content_tokens": 16331,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-16384-1024",
+      "phase": "measured",
+      "repetition": 2,
+      "nonce": "4ee0b1ca478254d23def31358bb3cbec",
+      "local_input_tokens": 16384,
+      "bare_content_tokens": 16331,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-16384-1024",
+      "phase": "measured",
+      "repetition": 3,
+      "nonce": "8f5a8c73b43c45aa1b49fc0b065c4dfd",
+      "local_input_tokens": 16384,
+      "bare_content_tokens": 16331,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-16384-1024",
+      "phase": "measured",
+      "repetition": 4,
+      "nonce": "6f9632752273e7883e40b516e3cdfe7f",
+      "local_input_tokens": 16384,
+      "bare_content_tokens": 16331,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-32768-256",
+      "phase": "warmup",
+      "repetition": 0,
+      "nonce": "b73bb9ebea7a5a21bb12573002d611a9",
+      "local_input_tokens": 32768,
+      "bare_content_tokens": 32715,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-32768-256",
+      "phase": "measured",
+      "repetition": 0,
+      "nonce": "51189e04800f476ef64d0c0e8d49ac9e",
+      "local_input_tokens": 32768,
+      "bare_content_tokens": 32715,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-32768-256",
+      "phase": "measured",
+      "repetition": 1,
+      "nonce": "feb33bcb7917d44dfb1f6688702bf2f5",
+      "local_input_tokens": 32768,
+      "bare_content_tokens": 32715,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-32768-256",
+      "phase": "measured",
+      "repetition": 2,
+      "nonce": "fa92c8166567805edb5d8e0a4267bd74",
+      "local_input_tokens": 32768,
+      "bare_content_tokens": 32715,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-32768-256",
+      "phase": "measured",
+      "repetition": 3,
+      "nonce": "30217528ca4ce08caf7c7e0f60e48262",
+      "local_input_tokens": 32768,
+      "bare_content_tokens": 32715,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-32768-256",
+      "phase": "measured",
+      "repetition": 4,
+      "nonce": "4992ffe8a72eaab498dac43c377432f5",
+      "local_input_tokens": 32768,
+      "bare_content_tokens": 32715,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-32768-1024",
+      "phase": "warmup",
+      "repetition": 0,
+      "nonce": "da94e5334d03d3729d1adf87913bf953",
+      "local_input_tokens": 32768,
+      "bare_content_tokens": 32715,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-32768-1024",
+      "phase": "measured",
+      "repetition": 0,
+      "nonce": "4f53c28d1d2fd4022032a6cc635524ea",
+      "local_input_tokens": 32768,
+      "bare_content_tokens": 32715,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-32768-1024",
+      "phase": "measured",
+      "repetition": 1,
+      "nonce": "fced0338e7fd64f72b564e8e8a042109",
+      "local_input_tokens": 32768,
+      "bare_content_tokens": 32715,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-32768-1024",
+      "phase": "measured",
+      "repetition": 2,
+      "nonce": "550ff564226adf4c6a858ecf22fd34cf",
+      "local_input_tokens": 32768,
+      "bare_content_tokens": 32715,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-32768-1024",
+      "phase": "measured",
+      "repetition": 3,
+      "nonce": "e72fd76bdc3d81d5d8d56c6cebb2992a",
+      "local_input_tokens": 32768,
+      "bare_content_tokens": 32715,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-32768-1024",
+      "phase": "measured",
+      "repetition": 4,
+      "nonce": "04db1aa49090590b5b2e9d8b9b57d52b",
+      "local_input_tokens": 32768,
+      "bare_content_tokens": 32715,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-65536-256",
+      "phase": "warmup",
+      "repetition": 0,
+      "nonce": "82fbbc75b346cbd8f0c1bccd96be2238",
+      "local_input_tokens": 65536,
+      "bare_content_tokens": 65483,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-65536-256",
+      "phase": "measured",
+      "repetition": 0,
+      "nonce": "6a0bed64ec2e75f7763a4777bdedf5a5",
+      "local_input_tokens": 65536,
+      "bare_content_tokens": 65483,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-65536-256",
+      "phase": "measured",
+      "repetition": 1,
+      "nonce": "3176cdea5e3c342cfdf2cac2af57bd15",
+      "local_input_tokens": 65536,
+      "bare_content_tokens": 65483,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-65536-256",
+      "phase": "measured",
+      "repetition": 2,
+      "nonce": "3e1f4688ace4e75b2f353ffc942c335f",
+      "local_input_tokens": 65536,
+      "bare_content_tokens": 65483,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-65536-256",
+      "phase": "measured",
+      "repetition": 3,
+      "nonce": "0c0fc9eb22fca5794c2a6ef7e3ec2b20",
+      "local_input_tokens": 65536,
+      "bare_content_tokens": 65483,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-65536-256",
+      "phase": "measured",
+      "repetition": 4,
+      "nonce": "d40fd035b026c8bb76ca51ac532d020d",
+      "local_input_tokens": 65536,
+      "bare_content_tokens": 65483,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-65536-1024",
+      "phase": "warmup",
+      "repetition": 0,
+      "nonce": "dc9622e4c341c91e1c471ef1aec5f1f1",
+      "local_input_tokens": 65536,
+      "bare_content_tokens": 65483,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-65536-1024",
+      "phase": "measured",
+      "repetition": 0,
+      "nonce": "92ce037ab5868437090924e330de6b93",
+      "local_input_tokens": 65536,
+      "bare_content_tokens": 65483,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-65536-1024",
+      "phase": "measured",
+      "repetition": 1,
+      "nonce": "8388a4e82888ec2525deaedfc16616d3",
+      "local_input_tokens": 65536,
+      "bare_content_tokens": 65483,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-65536-1024",
+      "phase": "measured",
+      "repetition": 2,
+      "nonce": "92e886a941953cb867dac0bc0f1c0b86",
+      "local_input_tokens": 65536,
+      "bare_content_tokens": 65483,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-65536-1024",
+      "phase": "measured",
+      "repetition": 3,
+      "nonce": "97ac1d87c9d6b6beba5d5dad18376aa4",
+      "local_input_tokens": 65536,
+      "bare_content_tokens": 65483,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-65536-1024",
+      "phase": "measured",
+      "repetition": 4,
+      "nonce": "8d1b672a9d3b674d6fb1f060c932586e",
+      "local_input_tokens": 65536,
+      "bare_content_tokens": 65483,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-131072-256",
+      "phase": "warmup",
+      "repetition": 0,
+      "nonce": "d72c08bcd64bf345adc86ae3e3a7c073",
+      "local_input_tokens": 131072,
+      "bare_content_tokens": 131019,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-131072-256",
+      "phase": "measured",
+      "repetition": 0,
+      "nonce": "8e7762fb641398cc2f935f4c0e625190",
+      "local_input_tokens": 131072,
+      "bare_content_tokens": 131019,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-131072-256",
+      "phase": "measured",
+      "repetition": 1,
+      "nonce": "76ebeb664690ff486c4fcc0009bdc88a",
+      "local_input_tokens": 131072,
+      "bare_content_tokens": 131019,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-131072-256",
+      "phase": "measured",
+      "repetition": 2,
+      "nonce": "7db44b30f138fdc2f4fb8ceb7592840e",
+      "local_input_tokens": 131072,
+      "bare_content_tokens": 131019,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-131072-256",
+      "phase": "measured",
+      "repetition": 3,
+      "nonce": "d83b948826ac6a8a08431c0afdfc0d20",
+      "local_input_tokens": 131072,
+      "bare_content_tokens": 131019,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-131072-256",
+      "phase": "measured",
+      "repetition": 4,
+      "nonce": "267f30ac61910216b2a66f81078645d1",
+      "local_input_tokens": 131072,
+      "bare_content_tokens": 131019,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-131072-1024",
+      "phase": "warmup",
+      "repetition": 0,
+      "nonce": "a8871f20d1492b58c08fa7b767534f83",
+      "local_input_tokens": 131072,
+      "bare_content_tokens": 131019,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-131072-1024",
+      "phase": "measured",
+      "repetition": 0,
+      "nonce": "a26cc1998b94daf61147f6f5e6e3d9da",
+      "local_input_tokens": 131072,
+      "bare_content_tokens": 131019,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-131072-1024",
+      "phase": "measured",
+      "repetition": 1,
+      "nonce": "99ad5bce7b631c362776cdc8ad4d758e",
+      "local_input_tokens": 131072,
+      "bare_content_tokens": 131019,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-131072-1024",
+      "phase": "measured",
+      "repetition": 2,
+      "nonce": "7593f07d1dac00de50e8e95d53f95f76",
+      "local_input_tokens": 131072,
+      "bare_content_tokens": 131019,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-131072-1024",
+      "phase": "measured",
+      "repetition": 3,
+      "nonce": "d3ab8e76f052d34e7525e8c4f3d3d2ec",
+      "local_input_tokens": 131072,
+      "bare_content_tokens": 131019,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-131072-1024",
+      "phase": "measured",
+      "repetition": 4,
+      "nonce": "691411f4b9aa3a67050b55a283914f83",
+      "local_input_tokens": 131072,
+      "bare_content_tokens": 131019,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-196608-256",
+      "phase": "warmup",
+      "repetition": 0,
+      "nonce": "03226e17d3addf691ee3da4d2933503a",
+      "local_input_tokens": 196608,
+      "bare_content_tokens": 196555,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-196608-256",
+      "phase": "measured",
+      "repetition": 0,
+      "nonce": "7ef893f2be2a4b22f5fa89ab93316fbf",
+      "local_input_tokens": 196608,
+      "bare_content_tokens": 196555,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-196608-256",
+      "phase": "measured",
+      "repetition": 1,
+      "nonce": "7a5ad3a924d667f14a8d15a88dab2c7a",
+      "local_input_tokens": 196608,
+      "bare_content_tokens": 196555,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-196608-256",
+      "phase": "measured",
+      "repetition": 2,
+      "nonce": "43b4aa0049d532313cb4e4dc93ba4e44",
+      "local_input_tokens": 196608,
+      "bare_content_tokens": 196555,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-196608-256",
+      "phase": "measured",
+      "repetition": 3,
+      "nonce": "f7199a4c67e1cc1a9eb1b570359b833b",
+      "local_input_tokens": 196608,
+      "bare_content_tokens": 196555,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-196608-256",
+      "phase": "measured",
+      "repetition": 4,
+      "nonce": "040bc7d3ccabf9d47f2d8fb1f527908c",
+      "local_input_tokens": 196608,
+      "bare_content_tokens": 196555,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-196608-1024",
+      "phase": "warmup",
+      "repetition": 0,
+      "nonce": "302638e9e48a1808e350d174f31520a9",
+      "local_input_tokens": 196608,
+      "bare_content_tokens": 196555,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-196608-1024",
+      "phase": "measured",
+      "repetition": 0,
+      "nonce": "0c2e81e0f510f86c051ba55dc77d0aee",
+      "local_input_tokens": 196608,
+      "bare_content_tokens": 196555,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-196608-1024",
+      "phase": "measured",
+      "repetition": 1,
+      "nonce": "cb2e574a4c087ec650cef0993fe2f294",
+      "local_input_tokens": 196608,
+      "bare_content_tokens": 196555,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-196608-1024",
+      "phase": "measured",
+      "repetition": 2,
+      "nonce": "6a61c3587e676f6b245eda4e8f6d7672",
+      "local_input_tokens": 196608,
+      "bare_content_tokens": 196555,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-196608-1024",
+      "phase": "measured",
+      "repetition": 3,
+      "nonce": "cbd935a26ca1cc02a09f5524dcacac90",
+      "local_input_tokens": 196608,
+      "bare_content_tokens": 196555,
+      "template_and_structured_overhead_tokens": 53
+    },
+    {
+      "condition": "fresh-context-196608-1024",
+      "phase": "measured",
+      "repetition": 4,
+      "nonce": "3a5c6bb37c9a5a02e9a5c9db2c30eb3c",
+      "local_input_tokens": 196608,
+      "bare_content_tokens": 196555,
+      "template_and_structured_overhead_tokens": 53
+    }
+  ],
+  "failures": []
+}

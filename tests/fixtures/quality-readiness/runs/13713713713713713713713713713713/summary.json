@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "run_id": "13713713713713713713713713713713",
+  "evidence": "controlled",
+  "status": "completed",
+  "default_workload_complete": true,
+  "families": {"performance": "completed", "coding": "completed", "long_context": "completed"},
+  "coverage": {
+    "coding": {"expected": 164, "attempted": 164, "generated": 164, "graded": 164, "accounted": 164},
+    "long_context": {"expected": 117, "accounted": 117, "scored": 117}
+  },
+  "coding": {
+    "correct": 82,
+    "accuracy": 0.5,
+    "accuracy_denominator": "graded tasks only",
+    "full_suite_accuracy": 0.5,
+    "uncertainty": {"method": "Wilson 95% interval over graded tasks", "lower": 0.4239, "upper": 0.5761},
+    "outcome_counts": {"correct": 82, "incorrect": 82, "generation_failed": 0, "not_attempted": 0, "grading_infrastructure": 0, "unsupported": 0, "cancelled": 0},
+    "limitations": "Standalone code quality, not agent success.",
+    "identity": {"schema_version": 1, "status": "verified", "counts": {"original": 164, "generated": 164, "sanitized": 164, "native": 164, "verified": 164}}
+  },
+  "ruler": {
+    "sampled_diagnostic": true,
+    "limited_precision": "Three samples per task and nominal context; descriptive means only, not a full official RULER score or ranking.",
+    "quality_by_context": {
+      "32768": {"scored": 39, "mean_score": 100.0},
+      "131072": {"scored": 39, "mean_score": 100.0},
+      "196608": {"scored": 39, "mean_score": 100.0}
+    },
+    "actual_input_ranges": {
+      "32768": {"samples": 39, "minimum": 32026, "maximum": 32767},
+      "131072": {"samples": 39, "minimum": 123225, "maximum": 131071},
+      "196608": {"samples": 39, "minimum": 185827, "maximum": 194731}
+    },
+    "input_accounting": {"compatibility_counts": {"exact": 0, "endpoint-authoritative": 117, "incompatible": 0, "unavailable": 0}},
+    "outcome_counts": {"success": 117, "failed": 0, "missing": 0, "unsupported": 0, "cancelled": 0}
+  },
+  "outcomes": []
+}

@@ -1,0 +1,109 @@
+{
+  "declared": {
+    "hardware": {
+      "accelerator": "NVIDIA GeForce RTX 5090",
+      "count": 1,
+      "memory": "32607 MiB",
+      "cpu": "AMD Ryzen 7 9800X3D 8-Core Processor",
+      "ram": "63333168 kB",
+      "os": "Fedora Linux 44 (Workstation Edition), Linux 7.1.13-200.fc44.x86_64",
+      "driver": "610.57.04"
+    },
+    "model": {
+      "source": "malaiwah/served-model",
+      "revision": "6362d06d351de1e3e4356a9e104682c423f23651",
+      "quantized_artifact": "EXL3 K5/K6 context artifact; model root /path/to/model",
+      "tokenizer": "/path/to/repo/tokenizer",
+      "template_overrides": {}
+    },
+    "serving": {
+      "engine": "vllm",
+      "version": "0.11.2.dev280+gilded.gnosis.v20.vllm4d006a4.b12xcd3ce19.fi1ac6942.cu132.20260810.r34",
+      "launch_command": "/usr/bin/podman run --rm --name served-model-vllm --device nvidia.com/gpu=all --security-opt=label=disable --ipc host -p 0.0.0.0:8080:8000 -v /path/to/model:/path/to/model:ro -v /path/to/runtime/runtime/tools/vllm-exl3-prefill-dispatch.py:/opt/venv/lib/python3.12/site-packages/vllm/model_executor/layers/quantization/exl3.py:ro -v /path/to/runtime/runtime/tools/vllm-qwen3_5-embed-quant-config.py:/opt/venv/lib/python3.12/site-packages/vllm/model_executor/models/qwen3_5.py:ro -v /path/to/runtime/runtime/tools/vllm-qwen3_5_mtp-embed-quant-config.py:/opt/venv/lib/python3.12/site-packages/vllm/model_executor/models/qwen3_5_mtp.py:ro -v /path/to/runtime/runtime/tools/vllm-mamba-align-scheduler.py:/opt/venv/lib/python3.12/site-packages/vllm/v1/core/sched/scheduler.py:ro -e VLLM_EXL3_EMBED_BITS=8 -e VLLM_EXL3_GRAPH_DECODE=1 -e VLLM_EXL3_PREFILL_RECONSTRUCT_M=128 -e PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True --entrypoint /opt/venv/bin/vllm docker.io/voipmonitor/vllm@sha256:820181fbbc975cd5291c411cda9771d58fecee1636d916f508f47230df20592b serve /path/to/model --served-model-name served-model --quantization exl3 --quantization-config {\"linear\":{\"weight\":\"mxfp8\"},\"ignore\":[\"re:.*visual\\\\..*\",\"re:.*in_proj_a$\",\"re:.*in_proj_b$\",\"re:.*in_proj_ba$\",\"re:.*mtp\\\\..*\",\"lm_head\"]} --max-model-len 262144 --gpu-memory-utilization 0.955 --max-num-seqs 1 --kv-cache-dtype fp8 --max-num-batched-tokens 2048 --speculative-config {\"method\":\"mtp\",\"num_speculative_tokens\":3} --mm-processor-kwargs {\"truncation\":false,\"max_pixels\":8388608} --compilation-config {\"cudagraph_mode\":\"FULL_DECODE_ONLY\",\"cudagraph_capture_sizes\":[4]} --reasoning-parser qwen3 --reasoning-config {\"reasoning_start_str\":\"<think>\",\"reasoning_end_str\":\"</think>\"} --enable-auto-tool-choice --tool-call-parser qwen3_coder --host 0.0.0.0 --port 8000",
+      "environment": {
+        "VLLM_EXL3_EMBED_BITS": "8",
+        "VLLM_EXL3_GRAPH_DECODE": "1",
+        "VLLM_EXL3_PREFILL_RECONSTRUCT_M": "128",
+        "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True"
+      }
+    },
+    "requests": {
+      "base_url": "http://localhost:8080",
+      "model_id": "served-model",
+      "context_window": 262144,
+      "generation": {
+        "temperature": 1.0,
+        "top_p": 0.95,
+        "top_k": 20,
+        "seed": 121
+      },
+      "reasoning": {
+        "chat_template_kwargs": {
+          "enable_thinking": true,
+          "reasoning_effort": "xhigh"
+        }
+      }
+    },
+    "benchmark": {
+      "tool": "aiperf",
+      "version": "0.12.0",
+      "transformers_version": "5.17.0",
+      "seed": 121,
+      "settings": {
+        "concurrency": 1
+      }
+    }
+  },
+  "observed": {
+    "captured_at": "2026-09-13T13:39:58+03:00",
+    "endpoint_models": {
+      "object": "list",
+      "data": [
+        {
+          "id": "served-model",
+          "object": "model",
+          "created": 1789292555,
+          "owned_by": "vllm",
+          "root": "/path/to/model",
+          "parent": null,
+          "max_model_len": 262144,
+          "permission": [
+            {
+              "id": "modelperm-9e522e3adb685c4b",
+              "object": "model_permission",
+              "created": 1789292555,
+              "allow_create_engine": false,
+              "allow_sampling": true,
+              "allow_logprobs": true,
+              "allow_search_indices": false,
+              "allow_view": true,
+              "allow_fine_tuning": false,
+              "organization": "*",
+              "group": null,
+              "is_blocking": false
+            }
+          ]
+        }
+      ]
+    },
+    "service": {
+      "active_state": "active",
+      "sub_state": "running",
+      "active_since": "Sat 2026-09-12 23:18:28 EEST",
+      "pre_run_gpu_utilization": "0 percent",
+      "pre_run_requests_running": 0,
+      "pre_run_requests_waiting": 0
+    },
+    "sources": {
+      "host": "ssh llm read-only inspection",
+      "model_route": "GET http://localhost:8080/v1/models",
+      "metrics": "GET http://localhost:8080/metrics",
+      "candidate_manifest": null
+    },
+    "tokenizer_sha256": {
+      "tokenizer.json": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+      "tokenizer_config.json": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27",
+      "chat_template.jinja": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041"
+    }
+  }
+}

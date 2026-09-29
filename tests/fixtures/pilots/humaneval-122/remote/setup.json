@@ -1,0 +1,89 @@
+{
+  "evidence": "pilot",
+  "observed_date": "2026-09-13",
+  "base_url": "http://localhost:8080",
+  "model_id": "served-model",
+  "context_window": 262144,
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 5090, 32607 MiB, 610.57.04",
+    "cpu": "AMD Ryzen 7 9800X3D 8-Core Processor",
+    "ram": "60 GiB (free -h rounded)",
+    "os": "Fedora Linux 44"
+  },
+  "model": {
+    "source": "malaiwah/Qwen3.8-27B-EXL3-K5K6-context",
+    "revision_from_download_metadata": "6362d06d351de1e3e4356a9e104682c423f23651",
+    "revision_limit": "Tokenizer download metadata observed; full model artifact byte identity not verified",
+    "tokenizer_files": {
+      "tokenizer_config.json": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27",
+      "tokenizer.json": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+      "chat_template.jinja": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041"
+    }
+  },
+  "serving": {
+    "image": "docker.io/voipmonitor/vllm@sha256:820181fbbc975cd5291c411cda9771d58fecee1636d916f508f47230df20592b",
+    "command": [
+      "serve",
+      "/models/Qwen3.8-27B-EXL3-K5K6-context",
+      "--served-model-name",
+      "served-model",
+      "--quantization",
+      "exl3",
+      "--quantization-config",
+      "{\"linear\":{\"weight\":\"mxfp8\"},\"ignore\":[\"re:.*visual\\\\..*\",\"re:.*in_proj_a$\",\"re:.*in_proj_b$\",\"re:.*in_proj_ba$\",\"re:.*mtp\\\\..*\",\"lm_head\"]}",
+      "--max-model-len",
+      "262144",
+      "--gpu-memory-utilization",
+      "0.955",
+      "--max-num-seqs",
+      "1",
+      "--kv-cache-dtype",
+      "fp8",
+      "--max-num-batched-tokens",
+      "2048",
+      "--speculative-config",
+      "{\"method\":\"mtp\",\"num_speculative_tokens\":3}",
+      "--mm-processor-kwargs",
+      "{\"truncation\":false,\"max_pixels\":8388608}",
+      "--compilation-config",
+      "{\"cudagraph_mode\":\"FULL_DECODE_ONLY\",\"cudagraph_capture_sizes\":[4]}",
+      "--reasoning-parser",
+      "qwen3",
+      "--reasoning-config",
+      "{\"reasoning_start_str\":\"<think>\",\"reasoning_end_str\":\"</think>\"}",
+      "--enable-auto-tool-choice",
+      "--tool-call-parser",
+      "qwen3_coder",
+      "--host",
+      "0.0.0.0",
+      "--port",
+      "8000"
+    ],
+    "environment": {
+      "VLLM_EXL3_EMBED_BITS": "8",
+      "VLLM_EXL3_GRAPH_DECODE": "1",
+      "VLLM_EXL3_PREFILL_RECONSTRUCT_M": "128",
+      "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True"
+    },
+    "prefix_caching": false,
+    "cache_evidence": "Observed startup log enable_prefix_caching=False"
+  },
+  "request_settings": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "seed": 122,
+    "chat_template_kwargs": {
+      "enable_thinking": true,
+      "reasoning_effort": "xhigh"
+    }
+  },
+  "settings_evidence": "Same explicitly submitted sampling/reasoning configuration as #121, seed 122 and quality max_tokens 4096.",
+  "benchmark": {
+    "generation": "aiperf==0.12.0",
+    "grading": "EvalPlus image digest in workload.json"
+  },
+  "prior_setup_source": "the performance pilot setup; hardware and serving declarations carried forward, current observations in runtime-observations.txt",
+  "max_tokens": 4096,
+  "request_timeout_seconds": 900
+}

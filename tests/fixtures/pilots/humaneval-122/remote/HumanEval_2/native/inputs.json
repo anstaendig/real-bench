@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "session_id": "session_000000",
+      "payloads": [
+        {
+          "messages": [
+            {
+              "role": "user",
+              "content": "Complete the following Python function. Return the complete implementation including imports and signature.\n```python\n\n\ndef truncate_number(number: float) -> float:\n    \"\"\" Given a positive floating point number, it can be decomposed into\n    and integer part (largest integer smaller than given number) and decimals\n    (leftover part always smaller than 1).\n\n    Return the decimal part of the number.\n    >>> truncate_number(3.5)\n    0.5\n    \"\"\"\n\n```"
+            }
+          ],
+          "model": "served-model",
+          "stream": true,
+          "max_completion_tokens": 4096,
+          "temperature": 1.0,
+          "top_p": 0.95,
+          "top_k": 20,
+          "seed": 122,
+          "chat_template_kwargs": {
+            "enable_thinking": true,
+            "reasoning_effort": "xhigh"
+          },
+          "stream_options": {
+            "include_usage": true
+          }
+        }
+      ]
+    }
+  ]
+}

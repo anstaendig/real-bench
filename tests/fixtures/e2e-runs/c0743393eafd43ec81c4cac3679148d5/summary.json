@@ -1,0 +1,3657 @@
+{
+  "schema_version": 1,
+  "run_id": "c0743393eafd43ec81c4cac3679148d5",
+  "evidence": "run",
+  "status": "completed",
+  "default_workload_complete": false,
+  "families": {
+    "performance": "partial",
+    "coding": "missing",
+    "long_context": "missing"
+  },
+  "coverage": {
+    "fresh_context": {
+      "expected": 60,
+      "accounted": 60,
+      "successful": 60
+    }
+  },
+  "cache": {
+    "configuration": {
+      "prefix_caching": false,
+      "source": "active vLLM cache_config_info and startup configuration",
+      "captured_at": "2026-09-13T13:39:58+03:00"
+    },
+    "observations": [
+      {
+        "phase": "pre-run",
+        "captured_at": "2026-09-13T13:39:58+03:00",
+        "prefix_cache_queries_total": 0,
+        "prefix_cache_hits_total": 0,
+        "prompt_tokens_cached_total": 0,
+        "requests_running": 0,
+        "requests_waiting": 0,
+        "source": "retained pre-run/metrics.prom"
+      }
+    ],
+    "request_design": "distinct prefixes discourage reuse; cache state is not controlled"
+  },
+  "warmups": [
+    {
+      "condition": "fresh-context-4096-256",
+      "requests": 1,
+      "excluded_from_measurements": true,
+      "exit_code": 0
+    },
+    {
+      "condition": "fresh-context-4096-1024",
+      "requests": 1,
+      "excluded_from_measurements": true,
+      "exit_code": 0
+    },
+    {
+      "condition": "fresh-context-16384-256",
+      "requests": 1,
+      "excluded_from_measurements": true,
+      "exit_code": 0
+    },
+    {
+      "condition": "fresh-context-16384-1024",
+      "requests": 1,
+      "excluded_from_measurements": true,
+      "exit_code": 0
+    },
+    {
+      "condition": "fresh-context-32768-256",
+      "requests": 1,
+      "excluded_from_measurements": true,
+      "exit_code": 0
+    },
+    {
+      "condition": "fresh-context-32768-1024",
+      "requests": 1,
+      "excluded_from_measurements": true,
+      "exit_code": 0
+    },
+    {
+      "condition": "fresh-context-65536-256",
+      "requests": 1,
+      "excluded_from_measurements": true,
+      "exit_code": 0
+    },
+    {
+      "condition": "fresh-context-65536-1024",
+      "requests": 1,
+      "excluded_from_measurements": true,
+      "exit_code": 0
+    },
+    {
+      "condition": "fresh-context-131072-256",
+      "requests": 1,
+      "excluded_from_measurements": true,
+      "exit_code": 0
+    },
+    {
+      "condition": "fresh-context-131072-1024",
+      "requests": 1,
+      "excluded_from_measurements": true,
+      "exit_code": 0
+    },
+    {
+      "condition": "fresh-context-196608-256",
+      "requests": 1,
+      "excluded_from_measurements": true,
+      "exit_code": 0
+    },
+    {
+      "condition": "fresh-context-196608-1024",
+      "requests": 1,
+      "excluded_from_measurements": true,
+      "exit_code": 0
+    }
+  ],
+  "outcomes": [
+    {
+      "condition": "fresh-context-4096-256",
+      "scenario": "fresh-context",
+      "input_tokens": 4096,
+      "output_target": 256,
+      "repetition": 0,
+      "outcome": "success",
+      "request_id": "0aedda6f-dd7e-4b67-a9b4-cc7be57d14ea",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 930.28325,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 3410.950125,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 102.79493896172575,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 4402.9600661948925,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 4096,
+      "actual_input_tokens": 4096,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-4096-256",
+      "scenario": "fresh-context",
+      "input_tokens": 4096,
+      "output_target": 256,
+      "repetition": 1,
+      "outcome": "success",
+      "request_id": "def140e0-b32c-4080-91cc-24fee1847c51",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 917.880542,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 3967.0804169999997,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 83.62849614769841,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 4462.454331012499,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 4096,
+      "actual_input_tokens": 4096,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-4096-256",
+      "scenario": "fresh-context",
+      "input_tokens": 4096,
+      "output_target": 256,
+      "repetition": 2,
+      "outcome": "success",
+      "request_id": "5d64717b-113b-4319-b09a-5067bc2aa194",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 917.917708,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 3667.951458,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 92.72613472471019,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 4462.273648609032,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 4096,
+      "actual_input_tokens": 4096,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-4096-256",
+      "scenario": "fresh-context",
+      "input_tokens": 4096,
+      "output_target": 256,
+      "repetition": 3,
+      "outcome": "success",
+      "request_id": "c5eb1459-ca18-431d-afed-3f1ba47acf73",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 915.962625,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 3713.1879999999996,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 91.16176418212278,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 4471.798180629914,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 4096,
+      "actual_input_tokens": 4096,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-4096-256",
+      "scenario": "fresh-context",
+      "input_tokens": 4096,
+      "output_target": 256,
+      "repetition": 4,
+      "outcome": "success",
+      "request_id": "2b858a9e-ea9f-4057-b7e9-26b3d9a731aa",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 923.6485839999999,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 3873.807084,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 86.43603386055358,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 4434.5869965627535,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 4096,
+      "actual_input_tokens": 4096,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-4096-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 4096,
+      "output_target": 1024,
+      "repetition": 0,
+      "outcome": "success",
+      "request_id": "b46fcd56-23ba-42b5-ab4a-4c7e430f28c8",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "metrics": {
+        "ttft": {
+          "value": 1039.3513329999998,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 11057.029625,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 101.72017610245692,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3940.91956198992,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 4096,
+      "actual_input_tokens": 4096,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1020,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": false,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-4096-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 4096,
+      "output_target": 1024,
+      "repetition": 1,
+      "outcome": "success",
+      "request_id": "03391803-77d7-429e-ad2a-56ae360fae43",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 926.4008749999999,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 11693.588042,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 95.0108866998578,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 4421.412058791503,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 4096,
+      "actual_input_tokens": 4096,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-4096-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 4096,
+      "output_target": 1024,
+      "repetition": 2,
+      "outcome": "success",
+      "request_id": "994c3f29-c104-4224-8370-807f3298c78a",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 937.6314169999999,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 12567.078167,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 87.96635145175756,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 4368.454304896654,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 4096,
+      "actual_input_tokens": 4096,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-4096-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 4096,
+      "output_target": 1024,
+      "repetition": 3,
+      "outcome": "success",
+      "request_id": "22b46984-a39d-4ae3-83d5-06f00e575b3b",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 929.462416,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 12793.268624999999,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 86.22865056780363,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 4406.848442164443,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 4096,
+      "actual_input_tokens": 4096,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-4096-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 4096,
+      "output_target": 1024,
+      "repetition": 4,
+      "outcome": "success",
+      "request_id": "fdf00b40-2ce1-492f-9c03-56d921d6b42c",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 929.246375,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 11936.69925,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 92.93703199251716,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 4407.872992778691,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 4096,
+      "actual_input_tokens": 4096,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-16384-256",
+      "scenario": "fresh-context",
+      "input_tokens": 16384,
+      "output_target": 256,
+      "repetition": 0,
+      "outcome": "success",
+      "request_id": "21ae633b-952b-422e-aa8d-959a11410aad",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 3922.3242499999997,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 6778.801541999999,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 89.27079543540093,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 4177.115137791068,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 16384,
+      "actual_input_tokens": 16384,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-16384-256",
+      "scenario": "fresh-context",
+      "input_tokens": 16384,
+      "output_target": 256,
+      "repetition": 1,
+      "outcome": "success",
+      "request_id": "e7f0b57a-3650-43e8-bdb4-9c9650f8051f",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 3897.306333,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 6921.315541999999,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 84.32514002969096,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 4203.929227033126,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 16384,
+      "actual_input_tokens": 16384,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-16384-256",
+      "scenario": "fresh-context",
+      "input_tokens": 16384,
+      "output_target": 256,
+      "repetition": 2,
+      "outcome": "success",
+      "request_id": "bbfcdbbc-ed37-4052-9c22-26590a538181",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 3896.5736669999997,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 6897.311,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 84.9791140316379,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 4204.719684566918,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 16384,
+      "actual_input_tokens": 16384,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-16384-256",
+      "scenario": "fresh-context",
+      "input_tokens": 16384,
+      "output_target": 256,
+      "repetition": 3,
+      "outcome": "success",
+      "request_id": "9b978712-9160-44d8-805b-856793c5a289",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 3907.5791249999997,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 6930.680125,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 84.3504732392335,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 4192.877348324968,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 16384,
+      "actual_input_tokens": 16384,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-16384-256",
+      "scenario": "fresh-context",
+      "input_tokens": 16384,
+      "output_target": 256,
+      "repetition": 4,
+      "outcome": "success",
+      "request_id": "b4ae38c7-2e4e-4d8f-8285-af5f03b4e7e2",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 4020.1130409999996,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 6953.542125,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 86.9289806223248,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 4075.5072887016363,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 16384,
+      "actual_input_tokens": 16384,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-16384-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 16384,
+      "output_target": 1024,
+      "repetition": 0,
+      "outcome": "success",
+      "request_id": "85faee62-909d-41c5-9454-ffb72031425b",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 3917.023166,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 15692.226541,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 86.87748036453765,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 4182.76821597945,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 16384,
+      "actual_input_tokens": 16384,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-16384-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 16384,
+      "output_target": 1024,
+      "repetition": 1,
+      "outcome": "success",
+      "request_id": "826583ca-6a1d-40a3-8b6e-4ffb569e816b",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 3903.464083,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 15344.371791,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 89.41598220258976,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 4197.297490542837,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 16384,
+      "actual_input_tokens": 16384,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-16384-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 16384,
+      "output_target": 1024,
+      "repetition": 2,
+      "outcome": "success",
+      "request_id": "d553e216-3b14-4173-a049-4b93e6f8fb8d",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 3918.9988749999998,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 14866.919958999999,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 93.4423980727335,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 4180.659531319718,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 16384,
+      "actual_input_tokens": 16384,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-16384-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 16384,
+      "output_target": 1024,
+      "repetition": 3,
+      "outcome": "success",
+      "request_id": "77a08830-d81f-4395-becb-7de593f98f87",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 3949.429083,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 15258.379832999999,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 90.45932046348331,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 4148.4477010927,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 16384,
+      "actual_input_tokens": 16384,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-16384-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 16384,
+      "output_target": 1024,
+      "repetition": 4,
+      "outcome": "success",
+      "request_id": "2bda5f78-db84-4af2-9be2-a288e39e51ea",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 3906.2055419999997,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 15596.68375,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 87.50711320773372,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 4194.351736957317,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 16384,
+      "actual_input_tokens": 16384,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-32768-256",
+      "scenario": "fresh-context",
+      "input_tokens": 32768,
+      "output_target": 256,
+      "repetition": 0,
+      "outcome": "success",
+      "request_id": "7e8a9d87-8b5c-4f6b-95c1-2a65899a67a5",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 8441.174665999999,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 11375.063457999999,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 86.91535981027054,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3881.9241748409045,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 32768,
+      "actual_input_tokens": 32768,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-32768-256",
+      "scenario": "fresh-context",
+      "input_tokens": 32768,
+      "output_target": 256,
+      "repetition": 1,
+      "outcome": "success",
+      "request_id": "9165eed4-816c-423f-8d44-d22ecdf94702",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 8433.988084,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 11395.803458999999,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 86.09584586277596,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3885.231953571728,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 32768,
+      "actual_input_tokens": 32768,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-32768-256",
+      "scenario": "fresh-context",
+      "input_tokens": 32768,
+      "output_target": 256,
+      "repetition": 2,
+      "outcome": "success",
+      "request_id": "5eeb081b-b420-48b4-9429-b579b9b3e556",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 8435.76,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 11396.382,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 86.13054959397046,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3884.4158676870843,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 32768,
+      "actual_input_tokens": 32768,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-32768-256",
+      "scenario": "fresh-context",
+      "input_tokens": 32768,
+      "output_target": 256,
+      "repetition": 3,
+      "outcome": "success",
+      "request_id": "ba878750-6c3c-488b-89a6-8e01f9dfe8b3",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 8450.245583,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 11089.118958,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 96.63214704267499,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3877.757122931654,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 32768,
+      "actual_input_tokens": 32768,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-32768-256",
+      "scenario": "fresh-context",
+      "input_tokens": 32768,
+      "output_target": 256,
+      "repetition": 4,
+      "outcome": "success",
+      "request_id": "59359eb0-6017-41e4-9eee-a5ac7c5ce486",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 8460.642625,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 11459.362874999999,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 85.03627505766835,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3872.9918579914015,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 32768,
+      "actual_input_tokens": 32768,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-32768-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 32768,
+      "output_target": 1024,
+      "repetition": 0,
+      "outcome": "success",
+      "request_id": "75b1b6de-875d-40da-9082-8ad30b8840bc",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 8484.903083,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 20348.330125,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 86.23140652176482,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3861.9180065418313,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 32768,
+      "actual_input_tokens": 32768,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-32768-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 32768,
+      "output_target": 1024,
+      "repetition": 1,
+      "outcome": "success",
+      "request_id": "f96921d0-131a-4af4-be2f-89e1ac1d6436",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "metrics": {
+        "ttft": {
+          "value": 8470.776208,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 14690.153166,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 98.72371527669026,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3868.358600839098,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 32768,
+      "actual_input_tokens": 32768,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 615,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": false,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-32768-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 32768,
+      "output_target": 1024,
+      "repetition": 2,
+      "outcome": "success",
+      "request_id": "2baf91f5-f0e7-421d-b28c-e7aa37dbb593",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 8441.780832999999,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 19906.996457999998,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 89.22640737513386,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3881.645431009734,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 32768,
+      "actual_input_tokens": 32768,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-32768-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 32768,
+      "output_target": 1024,
+      "repetition": 3,
+      "outcome": "success",
+      "request_id": "ac8ba479-d9fc-4da0-823e-c5c2d50404e9",
+      "http_status": 200,
+      "finish_reason": "stop",
+      "metrics": {
+        "ttft": {
+          "value": 8465.74475,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 16934.406084,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 89.97880183739555,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3870.6576878543374,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 32768,
+      "actual_input_tokens": 32768,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 763,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": false,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-32768-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 32768,
+      "output_target": 1024,
+      "repetition": 4,
+      "outcome": "success",
+      "request_id": "daeac128-f3ce-41cd-be74-d805ffa46e74",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 8435.844541999999,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 20208.703875,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 86.8947781557597,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3884.3769390078455,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 32768,
+      "actual_input_tokens": 32768,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-65536-256",
+      "scenario": "fresh-context",
+      "input_tokens": 65536,
+      "output_target": 256,
+      "repetition": 0,
+      "outcome": "success",
+      "request_id": "aa0a0cdf-d620-4618-b0aa-26325d5c7dc7",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 19579.386667,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 22627.680249999998,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 83.65335984109507,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3347.1937152381483,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 65536,
+      "actual_input_tokens": 65536,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-65536-256",
+      "scenario": "fresh-context",
+      "input_tokens": 65536,
+      "output_target": 256,
+      "repetition": 1,
+      "outcome": "success",
+      "request_id": "d97db24f-9b6e-4568-ae2c-f4bf33bac4de",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 19496.042833,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 22387.361416,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 88.19505449842708,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3361.5026680732567,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 65536,
+      "actual_input_tokens": 65536,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-65536-256",
+      "scenario": "fresh-context",
+      "input_tokens": 65536,
+      "output_target": 256,
+      "repetition": 2,
+      "outcome": "success",
+      "request_id": "cf05f047-0f6c-47da-baf4-1d199afe33ca",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 19491.698125,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 22475.498083,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 85.46149326006524,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3362.2519484817844,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 65536,
+      "actual_input_tokens": 65536,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-65536-256",
+      "scenario": "fresh-context",
+      "input_tokens": 65536,
+      "output_target": 256,
+      "repetition": 3,
+      "outcome": "success",
+      "request_id": "fe9196d0-8560-494d-bc29-4ae17d1fa217",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 19516.917083,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 22366.354042,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 89.4913639673893,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3357.9073847213513,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 65536,
+      "actual_input_tokens": 65536,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-65536-256",
+      "scenario": "fresh-context",
+      "input_tokens": 65536,
+      "output_target": 256,
+      "repetition": 4,
+      "outcome": "success",
+      "request_id": "04d487f7-5e35-454d-ad6e-f6d98c268677",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 19565.303541999998,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 22787.836958,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 79.13028883856266,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3349.603028612189,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 65536,
+      "actual_input_tokens": 65536,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-65536-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 65536,
+      "output_target": 1024,
+      "repetition": 0,
+      "outcome": "success",
+      "request_id": "54c80637-cab7-450d-88b3-2d1bbfaa89a7",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 19494.848209,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 31703.438083999998,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 83.79346103638362,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3361.7086574567234,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 65536,
+      "actual_input_tokens": 65536,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-65536-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 65536,
+      "output_target": 1024,
+      "repetition": 1,
+      "outcome": "success",
+      "request_id": "a017b67f-4d10-4664-9858-90ea730962ba",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 19511.086165999997,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 30417.933875,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 93.79428660728904,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3358.9109003169165,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 65536,
+      "actual_input_tokens": 65536,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-65536-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 65536,
+      "output_target": 1024,
+      "repetition": 2,
+      "outcome": "success",
+      "request_id": "03aec681-e0c8-4ec5-a895-371424110203",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 19539.0945,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 31345.604916,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 86.6471094298656,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3354.096066222516,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 65536,
+      "actual_input_tokens": 65536,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-65536-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 65536,
+      "output_target": 1024,
+      "repetition": 3,
+      "outcome": "success",
+      "request_id": "a1a1deb5-b442-4b8a-95f6-ac51201e7dcd",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 19513.922708,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 31509.705458,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 85.27997057966058,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3358.4226493391106,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 65536,
+      "actual_input_tokens": 65536,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-65536-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 65536,
+      "output_target": 1024,
+      "repetition": 4,
+      "outcome": "success",
+      "request_id": "00a0e0db-03f8-4662-b33a-c8545bcb3723",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 19552.744209,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 31790.202374999997,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 83.5957913909162,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 3351.7545823483033,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 65536,
+      "actual_input_tokens": 65536,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-131072-256",
+      "scenario": "fresh-context",
+      "input_tokens": 131072,
+      "output_target": 256,
+      "repetition": 0,
+      "outcome": "success",
+      "request_id": "ebb5aab8-3805-4fe0-96e3-77098a3721bf",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 50270.608374999996,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 53479.056375,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 79.47767892763105,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 2607.328700346169,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 131072,
+      "actual_input_tokens": 131072,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-131072-256",
+      "scenario": "fresh-context",
+      "input_tokens": 131072,
+      "output_target": 256,
+      "repetition": 1,
+      "outcome": "success",
+      "request_id": "07498c3b-3a8c-481d-8f06-0c50eecba1e1",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 50164.446832999995,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 53434.517791,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 77.97995923487846,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 2612.8465133154036,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 131072,
+      "actual_input_tokens": 131072,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-131072-256",
+      "scenario": "fresh-context",
+      "input_tokens": 131072,
+      "output_target": 256,
+      "repetition": 2,
+      "outcome": "success",
+      "request_id": "ab650743-0f15-45aa-9dfc-a02b7b10f6ce",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 50185.666832999996,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 53331.741083,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 81.05339535454384,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 2611.7417237108925,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 131072,
+      "actual_input_tokens": 131072,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-131072-256",
+      "scenario": "fresh-context",
+      "input_tokens": 131072,
+      "output_target": 256,
+      "repetition": 3,
+      "outcome": "success",
+      "request_id": "fb9ae023-5e3c-4627-8056-4ed95a46909f",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 50185.430292,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 53417.467292,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 78.89761163006487,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 2611.754033737836,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 131072,
+      "actual_input_tokens": 131072,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-131072-256",
+      "scenario": "fresh-context",
+      "input_tokens": 131072,
+      "output_target": 256,
+      "repetition": 4,
+      "outcome": "success",
+      "request_id": "aab5e429-4cdf-4e4a-a70c-7b70fe8323a4",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 50182.664749999996,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 53287.654792,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 82.1258672493997,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 2611.8979662195,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 131072,
+      "actual_input_tokens": 131072,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-131072-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 131072,
+      "output_target": 1024,
+      "repetition": 0,
+      "outcome": "success",
+      "request_id": "d8399d6b-c6e2-4071-9568-213003fbb40b",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 50272.442917,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 62958.122041999995,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 80.64211540586322,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 2607.233553706558,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 131072,
+      "actual_input_tokens": 131072,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-131072-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 131072,
+      "output_target": 1024,
+      "repetition": 1,
+      "outcome": "success",
+      "request_id": "6602f6af-2d43-48a7-83b3-62df18be368f",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 50114.46275,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 62827.476375,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 80.46872521148579,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 2615.452562144847,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 131072,
+      "actual_input_tokens": 131072,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-131072-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 131072,
+      "output_target": 1024,
+      "repetition": 2,
+      "outcome": "success",
+      "request_id": "79a2614e-0fd9-47c4-9a84-6b350b63371d",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 50339.38475,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 62979.976124999994,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 80.92975792439931,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 2603.766427637954,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 131072,
+      "actual_input_tokens": 131072,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-131072-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 131072,
+      "output_target": 1024,
+      "repetition": 3,
+      "outcome": "success",
+      "request_id": "d843317d-762d-477a-8b6d-fd27e2cb8734",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 50170.989875,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 62835.656291,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 80.77591358486832,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 2612.5057593354886,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 131072,
+      "actual_input_tokens": 131072,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-131072-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 131072,
+      "output_target": 1024,
+      "repetition": 4,
+      "outcome": "success",
+      "request_id": "002758e9-5195-46e7-95eb-e433f304f02b",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 50109.026999999995,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 63119.354709,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 78.62984106790265,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 2615.7362824067604,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 131072,
+      "actual_input_tokens": 131072,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-196608-256",
+      "scenario": "fresh-context",
+      "input_tokens": 196608,
+      "output_target": 256,
+      "repetition": 0,
+      "outcome": "success",
+      "request_id": "ef5bac30-4e81-4ea0-9a85-d63e51cc6edc",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 92120.254292,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 95502.968792,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 75.38324620655985,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 2134.253769825666,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 196608,
+      "actual_input_tokens": 196608,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-196608-256",
+      "scenario": "fresh-context",
+      "input_tokens": 196608,
+      "output_target": 256,
+      "repetition": 1,
+      "outcome": "success",
+      "request_id": "e836b5c9-6e8d-4bd8-977b-dae72e54b8e2",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 92138.293375,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 95491.418208,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 76.04846604289843,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 2133.8359198798216,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 196608,
+      "actual_input_tokens": 196608,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-196608-256",
+      "scenario": "fresh-context",
+      "input_tokens": 196608,
+      "output_target": 256,
+      "repetition": 2,
+      "outcome": "success",
+      "request_id": "554c955d-6948-49b7-828a-b09ce408cc75",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 92241.510708,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 95689.50283299999,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 73.9560853840407,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 2131.448178709723,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 196608,
+      "actual_input_tokens": 196608,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-196608-256",
+      "scenario": "fresh-context",
+      "input_tokens": 196608,
+      "output_target": 256,
+      "repetition": 3,
+      "outcome": "success",
+      "request_id": "092df166-fdb6-4463-86ce-128b0ad3f34d",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 92225.34137499999,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 95813.932875,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 71.05851975628879,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 2131.8218731288484,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 196608,
+      "actual_input_tokens": 196608,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-196608-256",
+      "scenario": "fresh-context",
+      "input_tokens": 196608,
+      "output_target": 256,
+      "repetition": 4,
+      "outcome": "success",
+      "request_id": "82f33d1a-29a3-4b5c-bda9-b1c37b3fe5bb",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 92357.644042,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 95729.1075,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 75.63481057311226,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 2128.7680304035443,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 196608,
+      "actual_input_tokens": 196608,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 256,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-196608-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 196608,
+      "output_target": 1024,
+      "repetition": 0,
+      "outcome": "success",
+      "request_id": "012d9149-f146-4d3c-adc2-beb30f5d731f",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 92452.463666,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 105616.851166,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 77.70965417114924,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 2126.5847572248513,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 196608,
+      "actual_input_tokens": 196608,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-196608-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 196608,
+      "output_target": 1024,
+      "repetition": 1,
+      "outcome": "success",
+      "request_id": "d3c6da4c-16f0-4d57-bf90-93cb9c1882d7",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 92231.398833,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 105373.12991599999,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 77.84362604431479,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 2131.6818620087383,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 196608,
+      "actual_input_tokens": 196608,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-196608-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 196608,
+      "output_target": 1024,
+      "repetition": 2,
+      "outcome": "success",
+      "request_id": "59c20511-06ed-4d21-9854-f393f72ef393",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 92278.61275,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 105641.75045899999,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 76.55387696192153,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 2130.5911970376906,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 196608,
+      "actual_input_tokens": 196608,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-196608-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 196608,
+      "output_target": 1024,
+      "repetition": 3,
+      "outcome": "success",
+      "request_id": "5ee2396a-db96-4ba3-af5c-8c0cdc2c81e3",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 92267.23375,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 105358.097708,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 78.14610275396156,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 2130.853955508339,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 196608,
+      "actual_input_tokens": 196608,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    },
+    {
+      "condition": "fresh-context-196608-1024",
+      "scenario": "fresh-context",
+      "input_tokens": 196608,
+      "output_target": 1024,
+      "repetition": 4,
+      "outcome": "success",
+      "request_id": "2d79f31b-b673-4775-931d-c694775763f8",
+      "http_status": 200,
+      "finish_reason": "length",
+      "metrics": {
+        "ttft": {
+          "value": 92238.157417,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:time_to_first_token",
+          "tool": "aiperf==0.12.0"
+        },
+        "completion_latency": {
+          "value": 105380.254542,
+          "unit": "ms",
+          "source": "native/profile_export.jsonl.gz:request_latency",
+          "tool": "aiperf==0.12.0"
+        },
+        "decode_rate": {
+          "value": 77.841457894415,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:output_token_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "value": 2131.5256668794214,
+          "unit": "tokens/sec/user",
+          "source": "native/profile_export.jsonl.gz:prefill_throughput_per_user",
+          "tool": "aiperf==0.12.0"
+        }
+      },
+      "local_input_tokens": 196608,
+      "actual_input_tokens": 196608,
+      "actual_input_tokens_source": "native/profile_export_raw.jsonl.gz:usage.prompt_tokens",
+      "actual_output_tokens": 1024,
+      "actual_output_tokens_source": "native/profile_export_raw.jsonl.gz:usage.completion_tokens",
+      "output_target_attained": true,
+      "endpoint_input_matches": true,
+      "token_accounting": "endpoint usage when available; includes endpoint-defined reasoning accounting"
+    }
+  ],
+  "fresh_context_curve": [
+    {
+      "scenario": "fresh-context",
+      "input_tokens": 4096,
+      "output_target": 256,
+      "outcomes": {
+        "success": 5,
+        "failed": 0,
+        "missing": 0,
+        "unsupported": 0,
+        "cancelled": 0
+      },
+      "metrics": {
+        "ttft": {
+          "unit": "ms",
+          "values": [
+            930.28325,
+            917.880542,
+            917.917708,
+            915.962625,
+            923.6485839999999
+          ],
+          "minimum": 915.962625,
+          "maximum": 930.28325,
+          "mean": 921.1385418,
+          "unavailable": 0
+        },
+        "completion_latency": {
+          "unit": "ms",
+          "values": [
+            3410.950125,
+            3967.0804169999997,
+            3667.951458,
+            3713.1879999999996,
+            3873.807084
+          ],
+          "minimum": 3410.950125,
+          "maximum": 3967.0804169999997,
+          "mean": 3726.5954168,
+          "unavailable": 0
+        },
+        "decode_rate": {
+          "unit": "tokens/sec/user",
+          "values": [
+            102.79493896172575,
+            83.62849614769841,
+            92.72613472471019,
+            91.16176418212278,
+            86.43603386055358
+          ],
+          "minimum": 83.62849614769841,
+          "maximum": 102.79493896172575,
+          "mean": 91.34947357536214,
+          "unavailable": 0
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "unit": "tokens/sec/user",
+          "values": [
+            4402.9600661948925,
+            4462.454331012499,
+            4462.273648609032,
+            4471.798180629914,
+            4434.5869965627535
+          ],
+          "minimum": 4402.9600661948925,
+          "maximum": 4471.798180629914,
+          "mean": 4446.814644601818,
+          "unavailable": 0
+        }
+      }
+    },
+    {
+      "scenario": "fresh-context",
+      "input_tokens": 4096,
+      "output_target": 1024,
+      "outcomes": {
+        "success": 5,
+        "failed": 0,
+        "missing": 0,
+        "unsupported": 0,
+        "cancelled": 0
+      },
+      "metrics": {
+        "ttft": {
+          "unit": "ms",
+          "values": [
+            1039.3513329999998,
+            926.4008749999999,
+            937.6314169999999,
+            929.462416,
+            929.246375
+          ],
+          "minimum": 926.4008749999999,
+          "maximum": 1039.3513329999998,
+          "mean": 952.4184832,
+          "unavailable": 0
+        },
+        "completion_latency": {
+          "unit": "ms",
+          "values": [
+            11057.029625,
+            11693.588042,
+            12567.078167,
+            12793.268624999999,
+            11936.69925
+          ],
+          "minimum": 11057.029625,
+          "maximum": 12793.268624999999,
+          "mean": 12009.5327418,
+          "unavailable": 0
+        },
+        "decode_rate": {
+          "unit": "tokens/sec/user",
+          "values": [
+            101.72017610245692,
+            95.0108866998578,
+            87.96635145175756,
+            86.22865056780363,
+            92.93703199251716
+          ],
+          "minimum": 86.22865056780363,
+          "maximum": 101.72017610245692,
+          "mean": 92.77261936287861,
+          "unavailable": 0
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "unit": "tokens/sec/user",
+          "values": [
+            3940.91956198992,
+            4421.412058791503,
+            4368.454304896654,
+            4406.848442164443,
+            4407.872992778691
+          ],
+          "minimum": 3940.91956198992,
+          "maximum": 4421.412058791503,
+          "mean": 4309.101472124243,
+          "unavailable": 0
+        }
+      }
+    },
+    {
+      "scenario": "fresh-context",
+      "input_tokens": 16384,
+      "output_target": 256,
+      "outcomes": {
+        "success": 5,
+        "failed": 0,
+        "missing": 0,
+        "unsupported": 0,
+        "cancelled": 0
+      },
+      "metrics": {
+        "ttft": {
+          "unit": "ms",
+          "values": [
+            3922.3242499999997,
+            3897.306333,
+            3896.5736669999997,
+            3907.5791249999997,
+            4020.1130409999996
+          ],
+          "minimum": 3896.5736669999997,
+          "maximum": 4020.1130409999996,
+          "mean": 3928.7792831999996,
+          "unavailable": 0
+        },
+        "completion_latency": {
+          "unit": "ms",
+          "values": [
+            6778.801541999999,
+            6921.315541999999,
+            6897.311,
+            6930.680125,
+            6953.542125
+          ],
+          "minimum": 6778.801541999999,
+          "maximum": 6953.542125,
+          "mean": 6896.330066799999,
+          "unavailable": 0
+        },
+        "decode_rate": {
+          "unit": "tokens/sec/user",
+          "values": [
+            89.27079543540093,
+            84.32514002969096,
+            84.9791140316379,
+            84.3504732392335,
+            86.9289806223248
+          ],
+          "minimum": 84.32514002969096,
+          "maximum": 89.27079543540093,
+          "mean": 85.97090067165762,
+          "unavailable": 0
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "unit": "tokens/sec/user",
+          "values": [
+            4177.115137791068,
+            4203.929227033126,
+            4204.719684566918,
+            4192.877348324968,
+            4075.5072887016363
+          ],
+          "minimum": 4075.5072887016363,
+          "maximum": 4204.719684566918,
+          "mean": 4170.829737283543,
+          "unavailable": 0
+        }
+      }
+    },
+    {
+      "scenario": "fresh-context",
+      "input_tokens": 16384,
+      "output_target": 1024,
+      "outcomes": {
+        "success": 5,
+        "failed": 0,
+        "missing": 0,
+        "unsupported": 0,
+        "cancelled": 0
+      },
+      "metrics": {
+        "ttft": {
+          "unit": "ms",
+          "values": [
+            3917.023166,
+            3903.464083,
+            3918.9988749999998,
+            3949.429083,
+            3906.2055419999997
+          ],
+          "minimum": 3903.464083,
+          "maximum": 3949.429083,
+          "mean": 3919.0241498,
+          "unavailable": 0
+        },
+        "completion_latency": {
+          "unit": "ms",
+          "values": [
+            15692.226541,
+            15344.371791,
+            14866.919958999999,
+            15258.379832999999,
+            15596.68375
+          ],
+          "minimum": 14866.919958999999,
+          "maximum": 15692.226541,
+          "mean": 15351.7163748,
+          "unavailable": 0
+        },
+        "decode_rate": {
+          "unit": "tokens/sec/user",
+          "values": [
+            86.87748036453765,
+            89.41598220258976,
+            93.4423980727335,
+            90.45932046348331,
+            87.50711320773372
+          ],
+          "minimum": 86.87748036453765,
+          "maximum": 93.4423980727335,
+          "mean": 89.54045886221559,
+          "unavailable": 0
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "unit": "tokens/sec/user",
+          "values": [
+            4182.76821597945,
+            4197.297490542837,
+            4180.659531319718,
+            4148.4477010927,
+            4194.351736957317
+          ],
+          "minimum": 4148.4477010927,
+          "maximum": 4197.297490542837,
+          "mean": 4180.704935178404,
+          "unavailable": 0
+        }
+      }
+    },
+    {
+      "scenario": "fresh-context",
+      "input_tokens": 32768,
+      "output_target": 256,
+      "outcomes": {
+        "success": 5,
+        "failed": 0,
+        "missing": 0,
+        "unsupported": 0,
+        "cancelled": 0
+      },
+      "metrics": {
+        "ttft": {
+          "unit": "ms",
+          "values": [
+            8441.174665999999,
+            8433.988084,
+            8435.76,
+            8450.245583,
+            8460.642625
+          ],
+          "minimum": 8433.988084,
+          "maximum": 8460.642625,
+          "mean": 8444.3621916,
+          "unavailable": 0
+        },
+        "completion_latency": {
+          "unit": "ms",
+          "values": [
+            11375.063457999999,
+            11395.803458999999,
+            11396.382,
+            11089.118958,
+            11459.362874999999
+          ],
+          "minimum": 11089.118958,
+          "maximum": 11459.362874999999,
+          "mean": 11343.146149999999,
+          "unavailable": 0
+        },
+        "decode_rate": {
+          "unit": "tokens/sec/user",
+          "values": [
+            86.91535981027054,
+            86.09584586277596,
+            86.13054959397046,
+            96.63214704267499,
+            85.03627505766835
+          ],
+          "minimum": 85.03627505766835,
+          "maximum": 96.63214704267499,
+          "mean": 88.16203547347206,
+          "unavailable": 0
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "unit": "tokens/sec/user",
+          "values": [
+            3881.9241748409045,
+            3885.231953571728,
+            3884.4158676870843,
+            3877.757122931654,
+            3872.9918579914015
+          ],
+          "minimum": 3872.9918579914015,
+          "maximum": 3885.231953571728,
+          "mean": 3880.4641954045546,
+          "unavailable": 0
+        }
+      }
+    },
+    {
+      "scenario": "fresh-context",
+      "input_tokens": 32768,
+      "output_target": 1024,
+      "outcomes": {
+        "success": 5,
+        "failed": 0,
+        "missing": 0,
+        "unsupported": 0,
+        "cancelled": 0
+      },
+      "metrics": {
+        "ttft": {
+          "unit": "ms",
+          "values": [
+            8484.903083,
+            8470.776208,
+            8441.780832999999,
+            8465.74475,
+            8435.844541999999
+          ],
+          "minimum": 8435.844541999999,
+          "maximum": 8484.903083,
+          "mean": 8459.8098832,
+          "unavailable": 0
+        },
+        "completion_latency": {
+          "unit": "ms",
+          "values": [
+            20348.330125,
+            14690.153166,
+            19906.996457999998,
+            16934.406084,
+            20208.703875
+          ],
+          "minimum": 14690.153166,
+          "maximum": 20348.330125,
+          "mean": 18417.7179416,
+          "unavailable": 0
+        },
+        "decode_rate": {
+          "unit": "tokens/sec/user",
+          "values": [
+            86.23140652176482,
+            98.72371527669026,
+            89.22640737513386,
+            89.97880183739555,
+            86.8947781557597
+          ],
+          "minimum": 86.23140652176482,
+          "maximum": 98.72371527669026,
+          "mean": 90.21102183334884,
+          "unavailable": 0
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "unit": "tokens/sec/user",
+          "values": [
+            3861.9180065418313,
+            3868.358600839098,
+            3881.645431009734,
+            3870.6576878543374,
+            3884.3769390078455
+          ],
+          "minimum": 3861.9180065418313,
+          "maximum": 3884.3769390078455,
+          "mean": 3873.3913330505693,
+          "unavailable": 0
+        }
+      }
+    },
+    {
+      "scenario": "fresh-context",
+      "input_tokens": 65536,
+      "output_target": 256,
+      "outcomes": {
+        "success": 5,
+        "failed": 0,
+        "missing": 0,
+        "unsupported": 0,
+        "cancelled": 0
+      },
+      "metrics": {
+        "ttft": {
+          "unit": "ms",
+          "values": [
+            19579.386667,
+            19496.042833,
+            19491.698125,
+            19516.917083,
+            19565.303541999998
+          ],
+          "minimum": 19491.698125,
+          "maximum": 19579.386667,
+          "mean": 19529.86965,
+          "unavailable": 0
+        },
+        "completion_latency": {
+          "unit": "ms",
+          "values": [
+            22627.680249999998,
+            22387.361416,
+            22475.498083,
+            22366.354042,
+            22787.836958
+          ],
+          "minimum": 22366.354042,
+          "maximum": 22787.836958,
+          "mean": 22528.9461498,
+          "unavailable": 0
+        },
+        "decode_rate": {
+          "unit": "tokens/sec/user",
+          "values": [
+            83.65335984109507,
+            88.19505449842708,
+            85.46149326006524,
+            89.4913639673893,
+            79.13028883856266
+          ],
+          "minimum": 79.13028883856266,
+          "maximum": 89.4913639673893,
+          "mean": 85.18631208110787,
+          "unavailable": 0
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "unit": "tokens/sec/user",
+          "values": [
+            3347.1937152381483,
+            3361.5026680732567,
+            3362.2519484817844,
+            3357.9073847213513,
+            3349.603028612189
+          ],
+          "minimum": 3347.1937152381483,
+          "maximum": 3362.2519484817844,
+          "mean": 3355.691749025346,
+          "unavailable": 0
+        }
+      }
+    },
+    {
+      "scenario": "fresh-context",
+      "input_tokens": 65536,
+      "output_target": 1024,
+      "outcomes": {
+        "success": 5,
+        "failed": 0,
+        "missing": 0,
+        "unsupported": 0,
+        "cancelled": 0
+      },
+      "metrics": {
+        "ttft": {
+          "unit": "ms",
+          "values": [
+            19494.848209,
+            19511.086165999997,
+            19539.0945,
+            19513.922708,
+            19552.744209
+          ],
+          "minimum": 19494.848209,
+          "maximum": 19552.744209,
+          "mean": 19522.3391584,
+          "unavailable": 0
+        },
+        "completion_latency": {
+          "unit": "ms",
+          "values": [
+            31703.438083999998,
+            30417.933875,
+            31345.604916,
+            31509.705458,
+            31790.202374999997
+          ],
+          "minimum": 30417.933875,
+          "maximum": 31790.202374999997,
+          "mean": 31353.3769416,
+          "unavailable": 0
+        },
+        "decode_rate": {
+          "unit": "tokens/sec/user",
+          "values": [
+            83.79346103638362,
+            93.79428660728904,
+            86.6471094298656,
+            85.27997057966058,
+            83.5957913909162
+          ],
+          "minimum": 83.5957913909162,
+          "maximum": 93.79428660728904,
+          "mean": 86.622123808823,
+          "unavailable": 0
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "unit": "tokens/sec/user",
+          "values": [
+            3361.7086574567234,
+            3358.9109003169165,
+            3354.096066222516,
+            3358.4226493391106,
+            3351.7545823483033
+          ],
+          "minimum": 3351.7545823483033,
+          "maximum": 3361.7086574567234,
+          "mean": 3356.978571136714,
+          "unavailable": 0
+        }
+      }
+    },
+    {
+      "scenario": "fresh-context",
+      "input_tokens": 131072,
+      "output_target": 256,
+      "outcomes": {
+        "success": 5,
+        "failed": 0,
+        "missing": 0,
+        "unsupported": 0,
+        "cancelled": 0
+      },
+      "metrics": {
+        "ttft": {
+          "unit": "ms",
+          "values": [
+            50270.608374999996,
+            50164.446832999995,
+            50185.666832999996,
+            50185.430292,
+            50182.664749999996
+          ],
+          "minimum": 50164.446832999995,
+          "maximum": 50270.608374999996,
+          "mean": 50197.7634166,
+          "unavailable": 0
+        },
+        "completion_latency": {
+          "unit": "ms",
+          "values": [
+            53479.056375,
+            53434.517791,
+            53331.741083,
+            53417.467292,
+            53287.654792
+          ],
+          "minimum": 53287.654792,
+          "maximum": 53479.056375,
+          "mean": 53390.0874666,
+          "unavailable": 0
+        },
+        "decode_rate": {
+          "unit": "tokens/sec/user",
+          "values": [
+            79.47767892763105,
+            77.97995923487846,
+            81.05339535454384,
+            78.89761163006487,
+            82.1258672493997
+          ],
+          "minimum": 77.97995923487846,
+          "maximum": 82.1258672493997,
+          "mean": 79.90690247930358,
+          "unavailable": 0
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "unit": "tokens/sec/user",
+          "values": [
+            2607.328700346169,
+            2612.8465133154036,
+            2611.7417237108925,
+            2611.754033737836,
+            2611.8979662195
+          ],
+          "minimum": 2607.328700346169,
+          "maximum": 2612.8465133154036,
+          "mean": 2611.1137874659603,
+          "unavailable": 0
+        }
+      }
+    },
+    {
+      "scenario": "fresh-context",
+      "input_tokens": 131072,
+      "output_target": 1024,
+      "outcomes": {
+        "success": 5,
+        "failed": 0,
+        "missing": 0,
+        "unsupported": 0,
+        "cancelled": 0
+      },
+      "metrics": {
+        "ttft": {
+          "unit": "ms",
+          "values": [
+            50272.442917,
+            50114.46275,
+            50339.38475,
+            50170.989875,
+            50109.026999999995
+          ],
+          "minimum": 50109.026999999995,
+          "maximum": 50339.38475,
+          "mean": 50201.2614584,
+          "unavailable": 0
+        },
+        "completion_latency": {
+          "unit": "ms",
+          "values": [
+            62958.122041999995,
+            62827.476375,
+            62979.976124999994,
+            62835.656291,
+            63119.354709
+          ],
+          "minimum": 62827.476375,
+          "maximum": 63119.354709,
+          "mean": 62944.117108399994,
+          "unavailable": 0
+        },
+        "decode_rate": {
+          "unit": "tokens/sec/user",
+          "values": [
+            80.64211540586322,
+            80.46872521148579,
+            80.92975792439931,
+            80.77591358486832,
+            78.62984106790265
+          ],
+          "minimum": 78.62984106790265,
+          "maximum": 80.92975792439931,
+          "mean": 80.28927063890386,
+          "unavailable": 0
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "unit": "tokens/sec/user",
+          "values": [
+            2607.233553706558,
+            2615.452562144847,
+            2603.766427637954,
+            2612.5057593354886,
+            2615.7362824067604
+          ],
+          "minimum": 2603.766427637954,
+          "maximum": 2615.7362824067604,
+          "mean": 2610.9389170463214,
+          "unavailable": 0
+        }
+      }
+    },
+    {
+      "scenario": "fresh-context",
+      "input_tokens": 196608,
+      "output_target": 256,
+      "outcomes": {
+        "success": 5,
+        "failed": 0,
+        "missing": 0,
+        "unsupported": 0,
+        "cancelled": 0
+      },
+      "metrics": {
+        "ttft": {
+          "unit": "ms",
+          "values": [
+            92120.254292,
+            92138.293375,
+            92241.510708,
+            92225.34137499999,
+            92357.644042
+          ],
+          "minimum": 92120.254292,
+          "maximum": 92357.644042,
+          "mean": 92216.60875839999,
+          "unavailable": 0
+        },
+        "completion_latency": {
+          "unit": "ms",
+          "values": [
+            95502.968792,
+            95491.418208,
+            95689.50283299999,
+            95813.932875,
+            95729.1075
+          ],
+          "minimum": 95491.418208,
+          "maximum": 95813.932875,
+          "mean": 95645.3860416,
+          "unavailable": 0
+        },
+        "decode_rate": {
+          "unit": "tokens/sec/user",
+          "values": [
+            75.38324620655985,
+            76.04846604289843,
+            73.9560853840407,
+            71.05851975628879,
+            75.63481057311226
+          ],
+          "minimum": 71.05851975628879,
+          "maximum": 76.04846604289843,
+          "mean": 74.41622559258,
+          "unavailable": 0
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "unit": "tokens/sec/user",
+          "values": [
+            2134.253769825666,
+            2133.8359198798216,
+            2131.448178709723,
+            2131.8218731288484,
+            2128.7680304035443
+          ],
+          "minimum": 2128.7680304035443,
+          "maximum": 2134.253769825666,
+          "mean": 2132.0255543895205,
+          "unavailable": 0
+        }
+      }
+    },
+    {
+      "scenario": "fresh-context",
+      "input_tokens": 196608,
+      "output_target": 1024,
+      "outcomes": {
+        "success": 5,
+        "failed": 0,
+        "missing": 0,
+        "unsupported": 0,
+        "cancelled": 0
+      },
+      "metrics": {
+        "ttft": {
+          "unit": "ms",
+          "values": [
+            92452.463666,
+            92231.398833,
+            92278.61275,
+            92267.23375,
+            92238.157417
+          ],
+          "minimum": 92231.398833,
+          "maximum": 92452.463666,
+          "mean": 92293.57328319999,
+          "unavailable": 0
+        },
+        "completion_latency": {
+          "unit": "ms",
+          "values": [
+            105616.851166,
+            105373.12991599999,
+            105641.75045899999,
+            105358.097708,
+            105380.254542
+          ],
+          "minimum": 105358.097708,
+          "maximum": 105641.75045899999,
+          "mean": 105474.0167582,
+          "unavailable": 0
+        },
+        "decode_rate": {
+          "unit": "tokens/sec/user",
+          "values": [
+            77.70965417114924,
+            77.84362604431479,
+            76.55387696192153,
+            78.14610275396156,
+            77.841457894415
+          ],
+          "minimum": 76.55387696192153,
+          "maximum": 78.14610275396156,
+          "mean": 77.61894356515242,
+          "unavailable": 0
+        },
+        "effective_endpoint_observed_prefill_throughput": {
+          "unit": "tokens/sec/user",
+          "values": [
+            2126.5847572248513,
+            2131.6818620087383,
+            2130.5911970376906,
+            2130.853955508339,
+            2131.5256668794214
+          ],
+          "minimum": 2126.5847572248513,
+          "maximum": 2131.6818620087383,
+          "mean": 2130.247487731808,
+          "unavailable": 0
+        }
+      }
+    }
+  ]
+}

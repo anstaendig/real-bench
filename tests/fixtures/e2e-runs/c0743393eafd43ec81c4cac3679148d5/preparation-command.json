@@ -1,0 +1,14 @@
+[
+  "uv",
+  "run",
+  "--with",
+  "aiperf==0.12.0",
+  "--with",
+  "transformers==5.17.0",
+  "python",
+  "/path/to/repo/src/llm_bench/performance_inputs.py",
+  "--spec",
+  "/path/to/repo/runs/c0743393eafd43ec81c4cac3679148d5/preparation-spec.json",
+  "--directory",
+  "/path/to/repo/runs/c0743393eafd43ec81c4cac3679148d5"
+]

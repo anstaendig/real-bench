@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>real-bench · Benchmark observatory</title>
+    <link rel="stylesheet" href="/assets/report.css?v=png-export" />
+    <script src="/assets/report.js?v=png-export" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <a class="brand" href="/reports"
+          ><span class="brand-mark">r<span>·</span></span
+          ><span
+            ><strong>real-bench</strong
+            ><small>Benchmark observatory</small></span
+          ></a
+        >
+        <div class="nav-label">WORKSPACE</div>
+        <nav class="nav" aria-label="Views">
+          <button type="button" data-view="live">
+            <span aria-hidden="true">◉</span> Live monitor
+          </button>
+          <button type="button" data-view="runs">
+            <span aria-hidden="true">▤</span> Run library
+          </button>
+          <button type="button" data-view="compare">
+            <span aria-hidden="true">◫</span> Compare
+            <span id="selection-count" class="nav-count">0</span>
+          </button>
+        </nav>
+        <div class="sidebar-bottom">
+          <span class="tiny-pulse" aria-hidden="true"></span
+          ><span
+            >Retained evidence<br /><small
+              >One run at a time. Every outcome visible.</small
+            ></span
+          >
+        </div>
+      </aside>
+      <main id="main" class="main">
+        <header class="topbar">
+          <div class="breadcrumb">
+            WORKSPACE <span>/</span>
+            <span id="breadcrumb-view">RUN LIBRARY</span>
+          </div>
+          <div class="top-actions">
+            <span id="status" role="status" aria-live="polite"></span
+            ><button id="rebuild" class="button subtle" type="button">
+              ↻ Rebuild index
+            </button>
+          </div>
+        </header>
+        <section
+          id="view-live"
+          class="view"
+          hidden
+          aria-labelledby="live-title"
+        >
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow">CURRENT EXECUTION</div>
+              <h1 id="live-title">Live monitor</h1>
+              <p>Progress and measured results from retained run data.</p>
+            </div>
+            <div class="heading-action">
+              <span id="live-connection" class="connection">Connecting</span
+              ><button id="live-refresh" class="button" type="button">
+                Refresh now
+              </button>
+            </div>
+          </div>
+          <div id="live-banner" class="notice" role="status"></div>
+          <div id="live-content"></div>
+        </section>
+        <section id="view-runs" class="view" aria-labelledby="runs-title">
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow">EVIDENCE CATALOG</div>
+              <h1 id="runs-title">Run library</h1>
+              <p>
+                Inspect retained runs, including partial and failed outcomes.
+              </p>
+            </div>
+            <div class="heading-action">
+              <span id="run-total" class="count-pill">0 runs</span>
+            </div>
+          </div>
+          <div class="toolbar panel">
+            <label class="search-wrap"
+              ><span class="sr-only">Search runs</span
+              ><span aria-hidden="true">⌕</span
+              ><input
+                id="search"
+                type="search"
+                placeholder="Search model, cache, effort, settings…"
+                autocomplete="off" /></label
+            ><label
+              >Sort by
+              <select id="sort"></select></label
+            ><label class="check-label"
+              ><input type="checkbox" id="descending" checked />
+              Descending</label
+            >
+          </div>
+          <details class="filter-panel panel">
+            <summary>
+              Advanced filters
+              <span id="filter-count" class="subtle-text"></span>
+            </summary>
+            <div class="filter-controls">
+              <label>Parameter<select id="field"></select></label
+              ><label>Exact value<select id="value"></select></label
+              ><button id="add-filter" type="button" class="button">
+                Add filter</button
+              ><button id="clear" type="button" class="button subtle">
+                Clear filters
+              </button>
+            </div>
+            <div id="filters" class="chips"></div>
+          </details>
+          <div id="runs" class="runs-list"></div>
+          <div id="run-detail" class="detail-panel" hidden></div>
+        </section>
+        <section
+          id="view-compare"
+          class="view"
+          hidden
+          aria-labelledby="compare-title"
+        >
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow">SIDE BY SIDE</div>
+              <h1 id="compare-title">Compare runs</h1>
+              <p>
+                Separate speed and quality measurements. Gaps remain visible.
+              </p>
+            </div>
+            <span id="compare-total" class="count-pill">0 selected</span>
+          </div>
+          <div class="panel compare-controls">
+            <label
+              >Curve metric<select id="metric">
+                <option value="ttft">Time to first token</option>
+                <option value="decode_rate">Decode rate</option>
+                <option value="completion_latency">Completion latency</option>
+                <option value="effective_endpoint_observed_prefill_throughput">
+                  Effective endpoint-observed prefill throughput
+                </option>
+              </select></label
+            ><label>Output target<select id="target"></select></label>
+          </div>
+          <div id="compare-empty" class="empty-state panel">
+            Choose runs from the library to compare their measurements and
+            recorded parameters.
+          </div>
+          <div id="comparison"></div>
+          <section class="section-block">
+            <div class="section-heading">
+              <h2>Recorded parameters</h2>
+              <p>Different or missing values are highlighted.</p>
+            </div>
+            <div id="parameters" class="table-scroll"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

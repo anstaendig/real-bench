@@ -1,0 +1,10 @@
+{
+  "declared": {
+    "hardware": {"accelerator": "Historical GPU", "count": 1},
+    "model": {"source": "historical/default-suite-134", "revision": "retained", "quantized_artifact": "retained", "tokenizer": "retained", "template_overrides": {}},
+    "serving": {"engine": "vllm", "version": "retained", "launch_command": "retained", "environment": {}},
+    "requests": {"base_url": "http://retained.invalid", "model_id": "retained", "generation": {}, "reasoning": {}, "context_window": 262144},
+    "benchmark": {"tool": "aiperf", "version": "0.12.0", "transformers_version": "5.17.0", "seed": 121, "settings": {"concurrency": 1}}
+  },
+  "observed": {}
+}

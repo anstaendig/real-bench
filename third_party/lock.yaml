@@ -1,0 +1,31 @@
+# Exact external revisions used by workload preparation.
+ruler:
+  source: https://github.com/NVIDIA/RULER
+  revision: c3f5e3b4f87f97e048793bb510a3a6b19a46bf3a
+# The llama.cpp OpenAI-compatible server (llama-server) is an externally
+# operated route, not a workload preparation: its revision is pinned here so
+# the per-run parameter and reasoning mapping (see docs/run-interface.md) has a bounded source reference.
+llama_cpp:
+  source: https://github.com/ggml-org/llama.cpp
+  revision: 911f6cdc8ab8a530b2bee09ee61471a6f3178eeb
+  build: b6150
+# The SGLang OpenAI-compatible server is an externally operated route, not
+# a workload preparation: its revision is pinned here so the per-run
+# parameter and reasoning mapping (see docs/run-interface.md) has a bounded source reference.
+sglang:
+  source: https://github.com/sgl-project/sglang
+  revision: 94602c9c2b7cbdb8efd5c52802dac6a1c180089e
+  release: v0.5.20
+# ExLlamaV3 is an inference library, not a server: its routes are served by
+# TabbyAPI, the official OpenAI-compatible server. Neither is an externally
+# operated workload preparation, so both revisions are pinned here (not the
+# TabbyAPI rolling release) to give the per-run parameter and reasoning
+# mapping (see docs/run-interface.md) a bounded
+# source reference.
+exllamav3:
+  source: https://github.com/turboderp-org/exllamav3
+  revision: 0740edc2da569fb99174023c1d2988b1e98cb41e
+  release: v1.5.0
+tabbyapi:
+  source: https://github.com/theroyallab/tabbyAPI
+  revision: 53da7919d4e45c63f4acbcbbc00cbe0f60a1ce65

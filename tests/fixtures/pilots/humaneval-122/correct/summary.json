@@ -1,0 +1,30 @@
+{
+  "evidence": "tool-validation",
+  "tasks": [
+    {
+      "task_id": "HumanEval/0",
+      "base_status": "pass",
+      "plus_status": "pass",
+      "outcome": "correct"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "base_status": "pass",
+      "plus_status": "pass",
+      "outcome": "correct"
+    },
+    {
+      "task_id": "HumanEval/2",
+      "base_status": "pass",
+      "plus_status": "pass",
+      "outcome": "correct"
+    }
+  ],
+  "selected": 3,
+  "graded": 3,
+  "correct": 3,
+  "complete": true,
+  "full_suite_accuracy": null,
+  "diagnostic": null,
+  "limitations": "Small selected sample; no full-suite accuracy or runtime claim."
+}

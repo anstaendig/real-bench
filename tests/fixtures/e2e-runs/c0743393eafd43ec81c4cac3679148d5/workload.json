@@ -1,0 +1,37 @@
+{
+  "evidence": "run",
+  "profile": "fresh-context-speed",
+  "scenario": "fresh-context",
+  "checkpoints": [
+    4096,
+    16384,
+    32768,
+    65536,
+    131072,
+    196608
+  ],
+  "output_targets": [
+    256,
+    1024
+  ],
+  "repetitions": 5,
+  "warmup_repetitions": 1,
+  "request_timeout_seconds": 900,
+  "cache_configuration": {
+    "prefix_caching": false,
+    "source": "active vLLM cache_config_info and startup configuration",
+    "captured_at": "2026-09-13T13:39:58+03:00"
+  },
+  "cache_observations": [
+    {
+      "phase": "pre-run",
+      "captured_at": "2026-09-13T13:39:58+03:00",
+      "prefix_cache_queries_total": 0,
+      "prefix_cache_hits_total": 0,
+      "prompt_tokens_cached_total": 0,
+      "requests_running": 0,
+      "requests_waiting": 0,
+      "source": "retained pre-run/metrics.prom"
+    }
+  ]
+}

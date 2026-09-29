@@ -1,0 +1,5 @@
+{
+  "profile": "default-suite",
+  "evidence": "run",
+  "expected_coverage": {"fresh_context": 60, "growing_session": 60, "coding": 164, "long_context": 117}
+}

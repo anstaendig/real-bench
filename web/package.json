@@ -1,0 +1,16 @@
+{
+  "name": "llm-bench-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25",
+    "npm": ">=11 <12"
+  },
+  "scripts": {
+    "e2e-reports": "playwright test --config=playwright.reports.config.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1"
+  }
+}

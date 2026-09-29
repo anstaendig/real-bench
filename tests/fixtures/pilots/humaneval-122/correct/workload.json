@@ -1,0 +1,20 @@
+{
+  "evidence": "tool-validation",
+  "task_ids": [
+    "HumanEval/0",
+    "HumanEval/1",
+    "HumanEval/2"
+  ],
+  "source_sha256": "42526ec0e7d5f3ee0b06d6ced98f8c8bae3d76519151bfb3d36f79010645bd7f",
+  "source_version": "HumanEval+ v0.1.10",
+  "evalplus_version": "0.4.0.dev2",
+  "evalplus_revision": "f11cfb92c1d52896a87f988cbebbd74727d56c7e",
+  "image": "ganler/evalplus@sha256:26b118098bef281fe8dfe999bf05f1d5b45374b4e6c00161ec0f30592aef4740",
+  "solutions_per_task": 1,
+  "full_suite_size": 164,
+  "grading": {
+    "parallel": 1,
+    "min_time_limit": 1,
+    "gt_time_limit_factor": 4
+  }
+}

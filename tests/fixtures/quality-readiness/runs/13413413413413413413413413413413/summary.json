@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "run_id": "13413413413413413413413413413413",
+  "evidence": "run",
+  "status": "partial",
+  "default_workload_complete": false,
+  "families": {"performance": "completed", "coding": "completed", "long_context": "partial"},
+  "coverage": {
+    "coding": {"expected": 164, "attempted": 164, "generated": 164, "graded": 164, "accounted": 164},
+    "long_context": {"expected": 117, "accounted": 117, "scored": 110}
+  },
+  "coding": {"correct": 148, "accuracy": 0.902439, "uncertainty": {"method": "Wilson 95% interval over graded tasks", "lower": 0.8474, "upper": 0.9391}, "identity": null},
+  "ruler": {
+    "sampled_diagnostic": true,
+    "limited_precision": "Three samples per task and nominal context; descriptive means only, not a full official RULER score or ranking.",
+    "quality_by_context": {"32768": {"scored": 39, "mean_score": 100.0}, "131072": {"scored": 36, "mean_score": 100.0}, "196608": {"scored": 35, "mean_score": 100.0}},
+    "actual_input_ranges": {"32768": {"samples": 39, "minimum": 29314, "maximum": 32768}, "131072": {"samples": 39, "minimum": 121506, "maximum": 131072}, "196608": {"samples": 39, "minimum": 185827, "maximum": 196608}},
+    "outcome_counts": {"success": 110, "failed": 7, "missing": 0, "unsupported": 0, "cancelled": 0}
+  },
+  "outcomes": []
+}

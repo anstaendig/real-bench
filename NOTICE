@@ -1,0 +1,20 @@
+real-bench
+Copyright 2026 Marcel Holter
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Bundled third-party data
+------------------------
+src/llm_bench/datasets/ contains the HumanEval+ v0.1.10 problem set published by the
+EvalPlus project (https://github.com/evalplus/evalplus, Apache-2.0), which
+extends the HumanEval problems by OpenAI (https://github.com/openai/human-eval,
+MIT). Its licence text is kept beside the data. tests/fixtures/ruler-upstream/
+contains small excerpts of NVIDIA RULER (https://github.com/NVIDIA/RULER,
+Apache-2.0) with its licence.
+
+External tools
+--------------
+real-bench does not redistribute the tools it drives. At run time it downloads
+and invokes AIPerf, Hugging Face Transformers, the pinned EvalPlus grading
+container, and the pinned NVIDIA RULER sources (see third_party/lock.yaml), each
+under its own licence.

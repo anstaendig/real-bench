@@ -1,0 +1,26 @@
+.venv/
+.aiperf-venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.py[cod]
+# Operator-local benchmark runs, native exports, indexes, and generated charts.
+results/
+# Operator-local setup state, prepared inputs, tokenizers, and submissions.
+.real-bench/
+data/
+web/node_modules/
+web/test-results/
+web/playwright-report/
+output/
+# Generated or machine-local files.
+.DS_Store
+.env
+.env.*
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+third_party/ruler/.venv/

@@ -1,0 +1,938 @@
+[
+  {
+    "task": "niah_single_1",
+    "checkpoint": 32768,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 5.461667458999727,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 32760,
+        "difference_from_checkpoint": -8
+      },
+      {
+        "index": 1,
+        "input_tokens": 32763,
+        "difference_from_checkpoint": -5
+      },
+      {
+        "index": 2,
+        "input_tokens": 32757,
+        "difference_from_checkpoint": -11
+      }
+    ]
+  },
+  {
+    "task": "niah_single_1",
+    "checkpoint": 131072,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 7.716991540997697,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 131057,
+        "difference_from_checkpoint": -15
+      },
+      {
+        "index": 1,
+        "input_tokens": 131057,
+        "difference_from_checkpoint": -15
+      },
+      {
+        "index": 2,
+        "input_tokens": 131060,
+        "difference_from_checkpoint": -12
+      }
+    ]
+  },
+  {
+    "task": "niah_single_1",
+    "checkpoint": 196608,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 9.238666707999073,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 196582,
+        "difference_from_checkpoint": -26
+      },
+      {
+        "index": 1,
+        "input_tokens": 196582,
+        "difference_from_checkpoint": -26
+      },
+      {
+        "index": 2,
+        "input_tokens": 196588,
+        "difference_from_checkpoint": -20
+      }
+    ]
+  },
+  {
+    "task": "niah_single_2",
+    "checkpoint": 32768,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 6.231529666001734,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 32160,
+        "difference_from_checkpoint": -608
+      },
+      {
+        "index": 1,
+        "input_tokens": 32160,
+        "difference_from_checkpoint": -608
+      },
+      {
+        "index": 2,
+        "input_tokens": 32768,
+        "difference_from_checkpoint": 0
+      }
+    ]
+  },
+  {
+    "task": "niah_single_2",
+    "checkpoint": 131072,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 9.990612499997951,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 131072,
+        "difference_from_checkpoint": 0
+      },
+      {
+        "index": 1,
+        "input_tokens": 131072,
+        "difference_from_checkpoint": 0
+      },
+      {
+        "index": 2,
+        "input_tokens": 131069,
+        "difference_from_checkpoint": -3
+      }
+    ]
+  },
+  {
+    "task": "niah_single_2",
+    "checkpoint": 196608,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 12.463651792000746,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 196607,
+        "difference_from_checkpoint": -1
+      },
+      {
+        "index": 1,
+        "input_tokens": 196607,
+        "difference_from_checkpoint": -1
+      },
+      {
+        "index": 2,
+        "input_tokens": 196604,
+        "difference_from_checkpoint": -4
+      }
+    ]
+  },
+  {
+    "task": "niah_single_3",
+    "checkpoint": 32768,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 6.088601707997441,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 32764,
+        "difference_from_checkpoint": -4
+      },
+      {
+        "index": 1,
+        "input_tokens": 32765,
+        "difference_from_checkpoint": -3
+      },
+      {
+        "index": 2,
+        "input_tokens": 32767,
+        "difference_from_checkpoint": -1
+      }
+    ]
+  },
+  {
+    "task": "niah_single_3",
+    "checkpoint": 131072,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 10.361602999997558,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 131070,
+        "difference_from_checkpoint": -2
+      },
+      {
+        "index": 1,
+        "input_tokens": 130479,
+        "difference_from_checkpoint": -593
+      },
+      {
+        "index": 2,
+        "input_tokens": 131068,
+        "difference_from_checkpoint": -4
+      }
+    ]
+  },
+  {
+    "task": "niah_single_3",
+    "checkpoint": 196608,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 13.126081875001546,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 196013,
+        "difference_from_checkpoint": -595
+      },
+      {
+        "index": 1,
+        "input_tokens": 196023,
+        "difference_from_checkpoint": -585
+      },
+      {
+        "index": 2,
+        "input_tokens": 196608,
+        "difference_from_checkpoint": 0
+      }
+    ]
+  },
+  {
+    "task": "niah_multikey_1",
+    "checkpoint": 32768,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 6.054255292001471,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 32766,
+        "difference_from_checkpoint": -2
+      },
+      {
+        "index": 1,
+        "input_tokens": 32150,
+        "difference_from_checkpoint": -618
+      },
+      {
+        "index": 2,
+        "input_tokens": 32765,
+        "difference_from_checkpoint": -3
+      }
+    ]
+  },
+  {
+    "task": "niah_multikey_1",
+    "checkpoint": 131072,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 9.779430583002977,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 131066,
+        "difference_from_checkpoint": -6
+      },
+      {
+        "index": 1,
+        "input_tokens": 131070,
+        "difference_from_checkpoint": -2
+      },
+      {
+        "index": 2,
+        "input_tokens": 130466,
+        "difference_from_checkpoint": -606
+      }
+    ]
+  },
+  {
+    "task": "niah_multikey_1",
+    "checkpoint": 196608,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 13.378479833998426,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 196606,
+        "difference_from_checkpoint": -2
+      },
+      {
+        "index": 1,
+        "input_tokens": 196021,
+        "difference_from_checkpoint": -587
+      },
+      {
+        "index": 2,
+        "input_tokens": 196015,
+        "difference_from_checkpoint": -593
+      }
+    ]
+  },
+  {
+    "task": "niah_multikey_2",
+    "checkpoint": 32768,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 5.385172000002058,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 32691,
+        "difference_from_checkpoint": -77
+      },
+      {
+        "index": 1,
+        "input_tokens": 32703,
+        "difference_from_checkpoint": -65
+      },
+      {
+        "index": 2,
+        "input_tokens": 32715,
+        "difference_from_checkpoint": -53
+      }
+    ]
+  },
+  {
+    "task": "niah_multikey_2",
+    "checkpoint": 131072,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 7.7286344159947475,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 130483,
+        "difference_from_checkpoint": -589
+      },
+      {
+        "index": 1,
+        "input_tokens": 131045,
+        "difference_from_checkpoint": -27
+      },
+      {
+        "index": 2,
+        "input_tokens": 130513,
+        "difference_from_checkpoint": -559
+      }
+    ]
+  },
+  {
+    "task": "niah_multikey_2",
+    "checkpoint": 196608,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 9.466679958997702,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 196537,
+        "difference_from_checkpoint": -71
+      },
+      {
+        "index": 1,
+        "input_tokens": 196050,
+        "difference_from_checkpoint": -558
+      },
+      {
+        "index": 2,
+        "input_tokens": 196583,
+        "difference_from_checkpoint": -25
+      }
+    ]
+  },
+  {
+    "task": "niah_multikey_3",
+    "checkpoint": 32768,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 5.1993765410006745,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 32714,
+        "difference_from_checkpoint": -54
+      },
+      {
+        "index": 1,
+        "input_tokens": 32710,
+        "difference_from_checkpoint": -58
+      },
+      {
+        "index": 2,
+        "input_tokens": 32674,
+        "difference_from_checkpoint": -94
+      }
+    ]
+  },
+  {
+    "task": "niah_multikey_3",
+    "checkpoint": 131072,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 6.776745708004455,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 129084,
+        "difference_from_checkpoint": -1988
+      },
+      {
+        "index": 1,
+        "input_tokens": 130923,
+        "difference_from_checkpoint": -149
+      },
+      {
+        "index": 2,
+        "input_tokens": 130922,
+        "difference_from_checkpoint": -150
+      }
+    ]
+  },
+  {
+    "task": "niah_multikey_3",
+    "checkpoint": 196608,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 8.028113000000303,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 196546,
+        "difference_from_checkpoint": -62
+      },
+      {
+        "index": 1,
+        "input_tokens": 194716,
+        "difference_from_checkpoint": -1892
+      },
+      {
+        "index": 2,
+        "input_tokens": 196552,
+        "difference_from_checkpoint": -56
+      }
+    ]
+  },
+  {
+    "task": "niah_multivalue",
+    "checkpoint": 32768,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 6.088480417005485,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 32761,
+        "difference_from_checkpoint": -7
+      },
+      {
+        "index": 1,
+        "input_tokens": 32761,
+        "difference_from_checkpoint": -7
+      },
+      {
+        "index": 2,
+        "input_tokens": 32767,
+        "difference_from_checkpoint": -1
+      }
+    ]
+  },
+  {
+    "task": "niah_multivalue",
+    "checkpoint": 131072,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 10.493616166997526,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 130463,
+        "difference_from_checkpoint": -609
+      },
+      {
+        "index": 1,
+        "input_tokens": 131068,
+        "difference_from_checkpoint": -4
+      },
+      {
+        "index": 2,
+        "input_tokens": 130469,
+        "difference_from_checkpoint": -603
+      }
+    ]
+  },
+  {
+    "task": "niah_multivalue",
+    "checkpoint": 196608,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 13.519427458006248,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 196607,
+        "difference_from_checkpoint": -1
+      },
+      {
+        "index": 1,
+        "input_tokens": 196607,
+        "difference_from_checkpoint": -1
+      },
+      {
+        "index": 2,
+        "input_tokens": 196017,
+        "difference_from_checkpoint": -591
+      }
+    ]
+  },
+  {
+    "task": "niah_multiquery",
+    "checkpoint": 32768,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 6.104528041003505,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 32765,
+        "difference_from_checkpoint": -3
+      },
+      {
+        "index": 1,
+        "input_tokens": 32768,
+        "difference_from_checkpoint": 0
+      },
+      {
+        "index": 2,
+        "input_tokens": 32157,
+        "difference_from_checkpoint": -611
+      }
+    ]
+  },
+  {
+    "task": "niah_multiquery",
+    "checkpoint": 131072,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 10.126149292002083,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 130472,
+        "difference_from_checkpoint": -600
+      },
+      {
+        "index": 1,
+        "input_tokens": 131071,
+        "difference_from_checkpoint": -1
+      },
+      {
+        "index": 2,
+        "input_tokens": 131059,
+        "difference_from_checkpoint": -13
+      }
+    ]
+  },
+  {
+    "task": "niah_multiquery",
+    "checkpoint": 196608,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 12.7528187909993,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 196015,
+        "difference_from_checkpoint": -593
+      },
+      {
+        "index": 1,
+        "input_tokens": 196607,
+        "difference_from_checkpoint": -1
+      },
+      {
+        "index": 2,
+        "input_tokens": 196595,
+        "difference_from_checkpoint": -13
+      }
+    ]
+  },
+  {
+    "task": "vt",
+    "checkpoint": 32768,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 1.4213173339958303,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 32760,
+        "difference_from_checkpoint": -8
+      },
+      {
+        "index": 1,
+        "input_tokens": 32754,
+        "difference_from_checkpoint": -14
+      },
+      {
+        "index": 2,
+        "input_tokens": 32754,
+        "difference_from_checkpoint": -14
+      }
+    ]
+  },
+  {
+    "task": "vt",
+    "checkpoint": 131072,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 3.594093084000633,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 131057,
+        "difference_from_checkpoint": -15
+      },
+      {
+        "index": 1,
+        "input_tokens": 131052,
+        "difference_from_checkpoint": -20
+      },
+      {
+        "index": 2,
+        "input_tokens": 131053,
+        "difference_from_checkpoint": -19
+      }
+    ]
+  },
+  {
+    "task": "vt",
+    "checkpoint": 196608,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 5.078171749999456,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 196355,
+        "difference_from_checkpoint": -253
+      },
+      {
+        "index": 1,
+        "input_tokens": 196607,
+        "difference_from_checkpoint": -1
+      },
+      {
+        "index": 2,
+        "input_tokens": 196605,
+        "difference_from_checkpoint": -3
+      }
+    ]
+  },
+  {
+    "task": "cwe",
+    "checkpoint": 32768,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 1.1965397910025786,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 32716,
+        "difference_from_checkpoint": -52
+      },
+      {
+        "index": 1,
+        "input_tokens": 32497,
+        "difference_from_checkpoint": -271
+      },
+      {
+        "index": 2,
+        "input_tokens": 32599,
+        "difference_from_checkpoint": -169
+      }
+    ]
+  },
+  {
+    "task": "cwe",
+    "checkpoint": 131072,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 2.711091042001499,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 131043,
+        "difference_from_checkpoint": -29
+      },
+      {
+        "index": 1,
+        "input_tokens": 130902,
+        "difference_from_checkpoint": -170
+      },
+      {
+        "index": 2,
+        "input_tokens": 131017,
+        "difference_from_checkpoint": -55
+      }
+    ]
+  },
+  {
+    "task": "cwe",
+    "checkpoint": 196608,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 4.667419167002663,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 196598,
+        "difference_from_checkpoint": -10
+      },
+      {
+        "index": 1,
+        "input_tokens": 196474,
+        "difference_from_checkpoint": -134
+      },
+      {
+        "index": 2,
+        "input_tokens": 196565,
+        "difference_from_checkpoint": -43
+      }
+    ]
+  },
+  {
+    "task": "fwe",
+    "checkpoint": 32768,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 1.2077215410026838,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 31016,
+        "difference_from_checkpoint": -1752
+      },
+      {
+        "index": 1,
+        "input_tokens": 31904,
+        "difference_from_checkpoint": -864
+      },
+      {
+        "index": 2,
+        "input_tokens": 32624,
+        "difference_from_checkpoint": -144
+      }
+    ]
+  },
+  {
+    "task": "fwe",
+    "checkpoint": 131072,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 2.8979455000007874,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 128812,
+        "difference_from_checkpoint": -2260
+      },
+      {
+        "index": 1,
+        "input_tokens": 128446,
+        "difference_from_checkpoint": -2626
+      },
+      {
+        "index": 2,
+        "input_tokens": 126323,
+        "difference_from_checkpoint": -4749
+      }
+    ]
+  },
+  {
+    "task": "fwe",
+    "checkpoint": 196608,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 4.1541686249984195,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 188130,
+        "difference_from_checkpoint": -8478
+      },
+      {
+        "index": 1,
+        "input_tokens": 196367,
+        "difference_from_checkpoint": -241
+      },
+      {
+        "index": 2,
+        "input_tokens": 188843,
+        "difference_from_checkpoint": -7765
+      }
+    ]
+  },
+  {
+    "task": "qa_1",
+    "checkpoint": 32768,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 1.2218343749991618,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 30153,
+        "difference_from_checkpoint": -2615
+      },
+      {
+        "index": 1,
+        "input_tokens": 31003,
+        "difference_from_checkpoint": -1765
+      },
+      {
+        "index": 2,
+        "input_tokens": 32441,
+        "difference_from_checkpoint": -327
+      }
+    ]
+  },
+  {
+    "task": "qa_1",
+    "checkpoint": 131072,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 4.153028749999066,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 128467,
+        "difference_from_checkpoint": -2605
+      },
+      {
+        "index": 1,
+        "input_tokens": 127602,
+        "difference_from_checkpoint": -3470
+      },
+      {
+        "index": 2,
+        "input_tokens": 130769,
+        "difference_from_checkpoint": -303
+      }
+    ]
+  },
+  {
+    "task": "qa_1",
+    "checkpoint": 196608,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 5.54884908299573,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 193500,
+        "difference_from_checkpoint": -3108
+      },
+      {
+        "index": 1,
+        "input_tokens": 195864,
+        "difference_from_checkpoint": -744
+      },
+      {
+        "index": 2,
+        "input_tokens": 196147,
+        "difference_from_checkpoint": -461
+      }
+    ]
+  },
+  {
+    "task": "qa_2",
+    "checkpoint": 32768,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 1.7347070000032545,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 32448,
+        "difference_from_checkpoint": -320
+      },
+      {
+        "index": 1,
+        "input_tokens": 31619,
+        "difference_from_checkpoint": -1149
+      },
+      {
+        "index": 2,
+        "input_tokens": 31759,
+        "difference_from_checkpoint": -1009
+      }
+    ]
+  },
+  {
+    "task": "qa_2",
+    "checkpoint": 131072,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 5.3853018330046325,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 127762,
+        "difference_from_checkpoint": -3310
+      },
+      {
+        "index": 1,
+        "input_tokens": 130629,
+        "difference_from_checkpoint": -443
+      },
+      {
+        "index": 2,
+        "input_tokens": 127277,
+        "difference_from_checkpoint": -3795
+      }
+    ]
+  },
+  {
+    "task": "qa_2",
+    "checkpoint": 196608,
+    "exit_code": 0,
+    "diagnostic": null,
+    "elapsed_seconds": 5.820014249999076,
+    "samples": [
+      {
+        "index": 0,
+        "input_tokens": 195300,
+        "difference_from_checkpoint": -1308
+      },
+      {
+        "index": 1,
+        "input_tokens": 189261,
+        "difference_from_checkpoint": -7347
+      },
+      {
+        "index": 2,
+        "input_tokens": 194755,
+        "difference_from_checkpoint": -1853
+      }
+    ]
+  }
+]

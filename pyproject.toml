@@ -1,0 +1,62 @@
+[project]
+name = "llm-bench"
+version = "0.1.0"
+description = "Benchmark speed, coding quality, and long-context quality of a remote OpenAI-compatible model endpoint"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "Marcel Holter" }]
+keywords = ["llm", "benchmark", "inference", "openai-compatible", "humaneval", "ruler"]
+classifiers = [
+  "Programming Language :: Python :: 3.12",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Testing",
+]
+dependencies = [
+  "fastapi>=0.115,<1",
+  "pydantic>=2.9,<3",
+  "pyyaml>=6.0,<7",
+  "tokenizers>=0.21,<1",
+  "typer>=0.15,<1",
+  "uvicorn[standard]>=0.32,<1",
+]
+
+[project.urls]
+Homepage = "https://github.com/anstaendig/real-bench"
+Issues = "https://github.com/anstaendig/real-bench/issues"
+
+[project.scripts]
+bench = "llm_bench.ordinary_cli:app"
+
+[dependency-groups]
+dev = [
+  "httpx>=0.27,<1",
+  "mypy>=1.13,<2",
+  "psutil>=6.1,<8",
+  "pytest>=8.3,<9",
+  "ruff>=0.8,<1",
+  "types-PyYAML>=6.0,<7",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+exclude = ["docs", "third_party/ruler"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["B008"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

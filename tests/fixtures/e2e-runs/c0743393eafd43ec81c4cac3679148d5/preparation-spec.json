@@ -1,0 +1,82 @@
+{
+  "tokenizer": "/path/to/repo/tokenizer",
+  "chat_template_kwargs": {
+    "enable_thinking": true,
+    "reasoning_effort": "xhigh"
+  },
+  "request_settings": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "seed": 121,
+    "chat_template_kwargs": {
+      "enable_thinking": true,
+      "reasoning_effort": "xhigh"
+    }
+  },
+  "seed": 121,
+  "repetitions": 5,
+  "warmup_repetitions": 1,
+  "conditions": [
+    {
+      "name": "fresh-context-4096-256",
+      "input_tokens": 4096,
+      "output_target": 256
+    },
+    {
+      "name": "fresh-context-4096-1024",
+      "input_tokens": 4096,
+      "output_target": 1024
+    },
+    {
+      "name": "fresh-context-16384-256",
+      "input_tokens": 16384,
+      "output_target": 256
+    },
+    {
+      "name": "fresh-context-16384-1024",
+      "input_tokens": 16384,
+      "output_target": 1024
+    },
+    {
+      "name": "fresh-context-32768-256",
+      "input_tokens": 32768,
+      "output_target": 256
+    },
+    {
+      "name": "fresh-context-32768-1024",
+      "input_tokens": 32768,
+      "output_target": 1024
+    },
+    {
+      "name": "fresh-context-65536-256",
+      "input_tokens": 65536,
+      "output_target": 256
+    },
+    {
+      "name": "fresh-context-65536-1024",
+      "input_tokens": 65536,
+      "output_target": 1024
+    },
+    {
+      "name": "fresh-context-131072-256",
+      "input_tokens": 131072,
+      "output_target": 256
+    },
+    {
+      "name": "fresh-context-131072-1024",
+      "input_tokens": 131072,
+      "output_target": 1024
+    },
+    {
+      "name": "fresh-context-196608-256",
+      "input_tokens": 196608,
+      "output_target": 256
+    },
+    {
+      "name": "fresh-context-196608-1024",
+      "input_tokens": 196608,
+      "output_target": 1024
+    }
+  ]
+}
